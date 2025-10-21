@@ -1,0 +1,52 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A bright and clean modern living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzYxMDAzMzQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean living room"
+    },
+    {
+      "id": "domestic-cleaning",
+      "description": "A sparkling clean kitchen.",
+      "imageUrl": "https://images.unsplash.com/photo-1567767326925-e2047bf469d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGtpdGNoZW58ZW58MHx8fHwxNzYwOTc1MDI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean kitchen"
+    },
+    {
+      "id": "office-cleaning",
+      "description": "A tidy and professional office space.",
+      "imageUrl": "https://images.unsplash.com/photo-1621953703922-8146d7127225?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMG9mZmljZXxlbnwwfHx8fDE3NjEwNzA5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean office"
+    },
+    {
+      "id": "commercial-cleaning",
+      "description": "A clean commercial building exterior.",
+      "imageUrl": "https://images.unsplash.com/photo-1588148208486-a3b096a44537?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tZXJjaWFsJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzYxMDUxMzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "commercial building"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1607529378676-a20456ee2f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MDk1NTA4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1744631081118-498c9187cdfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBoYXBweXxlbnwwfHx8fDE3NjA5Nzk4MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person happy"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1603080029028-8c7e9f1a958f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwY29udGVudHxlbnwwfHx8fDE3NjEwNzUyMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person content"
+    },
+    {
+      "id": "avatar-4",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1570170609489-43197f518df0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzYxMDQxMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person professional"
+    }
+  ]
+}
