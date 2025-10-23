@@ -28,7 +28,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold">Email</h3>
                   <a href="mailto:quote@harvita.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    quote@harvita.com
+                    info@harvita.co.uk
                   </a>
                 </div>
               </div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold">Phone</h3>
                   <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                    07747 874664
                   </a>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold">Office Address</h3>
                   <p className="text-muted-foreground">
-                    123 Clean Street, Sparkle City, 11223
+                    24 Cromwell Road, Burgess hill, R15 8QH
                   </p>
                 </div>
               </div>

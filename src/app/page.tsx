@@ -64,7 +64,7 @@ export default function Home() {
             Sparkling Clean, Every Time.
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Harvita Cleaning Services offers premium domestic, office, and commercial cleaning tailored to your needs.
+            Harvita Services offers premium domestic, office, and commercial cleaning tailored to your needs.
           </p>
           <Button asChild size="lg" className="mt-8">
             <Link href="/contact">Get a Free Quote</Link>

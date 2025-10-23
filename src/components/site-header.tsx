@@ -2,22 +2,41 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Wind } from "lucide-react";
+import { Menu, Wind, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const navLinks = [
+const mainNavLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
   { href: "/reviews", label: "Reviews" },
   { href: "/contact", label: "Contact" },
+];
+
+
+const servicesNavLinks = [
+  { href: "/services/domestic", label: "Domestic Cleaning" },
+  { href: "/services/office", label: "Office Cleaning" },
+  { href: "/services/commercial", label: "Commercial Cleaning" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
+  
+  const allNavLinks = [
+    ...mainNavLinks.slice(0, 1),
+    { href: "/services", label: "Services" },
+    ...servicesNavLinks,
+    ...mainNavLinks.slice(1)
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -26,22 +45,47 @@ export function SiteHeader() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Wind className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block font-headline">
-              Harvita Cleaning
+              Harvita Services
             </span>
           </Link>
-          <nav className="hidden gap-6 text-sm md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "transition-colors hover:text-foreground/80",
-                  pathname === link.href ? "text-foreground font-semibold" : "text-foreground/60"
-                )}
-              >
-                {link.label}
-              </Link>
+          <nav className="hidden gap-4 text-sm md:flex">
+            {mainNavLinks.map((link) => (
+              <Button key={link.href} variant="ghost" className={cn(
+                  "gap-1 px-2 transition-colors hover:text-foreground/80",
+                  pathname.startsWith(`/${link.label}`) ? "text-foreground font-semibold" : "text-foreground/60"
+                )}>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80",
+                    pathname === link.href ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </Button>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className={cn(
+                  "gap-1 px-2 transition-colors hover:text-foreground/80",
+                  pathname.startsWith('/services') ? "text-foreground font-semibold" : "text-foreground/60"
+                )}>
+                  Services
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                 <DropdownMenuItem asChild>
+                  <Link href="/services">All Services</Link>
+                </DropdownMenuItem>
+                {servicesNavLinks.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    <Link href={link.href}>{link.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
@@ -69,7 +113,7 @@ export function SiteHeader() {
                 <span className="font-bold font-headline">Harvita Cleaning</span>
               </Link>
               <nav className="flex flex-col gap-6 text-lg">
-                {navLinks.map((link) => (
+                {allNavLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}

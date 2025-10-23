@@ -9,23 +9,26 @@ const services = [
   {
     id: 'domestic',
     title: 'Domestic Cleaning',
-    description: 'Our domestic cleaning service is designed to give you back your time. We offer regular weekly, bi-weekly, or monthly cleaning schedules, as well as one-off deep cleans. Your home will be a consistently clean and healthy environment for you and your family.',
+    description: 'Welcome to our premium domestic cleaning service, designed to give you back your time while keeping your home immaculate. Choose the schedule that works best for you: regular weekly cleaning to maintain consistent freshness, fortnightly visits for ongoing maintenance, or a customized frequency that fits your unique needs. Additionally, we offer intensive one-off deep cleaning sessions for complete home transformations, perfect for seasonal resets, special occasions, or when your space needs that extra level of care and attention.',
     image: PlaceHolderImages.find((img) => img.id === 'domestic-cleaning'),
     features: ['Kitchen surfaces and appliances', 'Bathroom sanitization', 'Dusting and vacuuming', 'Floor mopping', 'Bedroom tidying'],
+    href: '/services/domestic',
   },
   {
     id: 'office',
     title: 'Office Cleaning',
-    description: 'A clean and organized office promotes productivity and leaves a great impression on clients. We provide reliable and efficient cleaning services for small to medium-sized offices, ensuring your workspace is always professional and welcoming.',
+    description: "Harvita Services provides professional office cleaning designed to create a spotless, productive workspace. We help you maintain a clean and healthy environment that boosts employee morale and impresses clients. Our customized cleaning plans are tailored to your office's specific needs and schedule, with services available during or after business hours. Reach out to schedule a free assessment and let us create a cleaning solution that fits your budget and keeps your business shining.",
     image: PlaceHolderImages.find((img) => img.id === 'office-cleaning'),
     features: ['Workstation and desk cleaning', 'Common area and lobby upkeep', 'Restroom cleaning and restocking', 'Trash removal', 'Floor care and vacuuming'],
+    href: '/services/office',
   },
   {
     id: 'commercial',
     title: 'Commercial Cleaning',
-    description: 'We handle cleaning for a variety of commercial spaces, including retail stores, medical facilities, and more. Our team is equipped to manage larger areas and specialized cleaning needs, adhering to the highest standards of cleanliness and hygiene.',
+    description: "Transform your business environment with Harvita Services' professional commercial cleaning solutions, serving Burgess Hill and West Sussex. We specialize in creating cleaner, healthier spaces for small and medium businesses, knowing that your premises' appearance directly influences customer perceptions and staff satisfaction. Our customized cleaning protocols are carefully crafted to deliver maximum impact within your budget framework. Take the first step toward a spotless workplace by booking your no-obligation site visit, where we'll assess your needs and illustrate our unwavering commitment to dependable, high-quality service that keeps your business looking its best.",
     image: PlaceHolderImages.find((img) => img.id === 'commercial-cleaning'),
     features: ['Customized cleaning plans', 'Large-scale floor maintenance', 'Window and facade cleaning', 'Sanitization of high-touch areas', 'Flexible scheduling (after hours)'],
+    href: '/services/commercial',
   },
 ];
 
@@ -70,7 +73,10 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                 </CardContent>
-                 <CardFooter className="p-0 pt-6">
+                 <CardFooter className="flex gap-4 p-0 pt-6">
+                  <Button asChild>
+                     <Link href={service.href}>Learn More</Link>
+                   </Button>
                    <Button asChild>
                      <Link href={`/contact?service=${service.id}`}>Get Quote for {service.title}</Link>
                    </Button>
