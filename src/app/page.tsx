@@ -101,10 +101,10 @@ export default function Home() {
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Commitment to You</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            We strive to provide a premium service tailored to your needs and we are continually developing our service dvia feedback from our customers and staff.
+            We strive to provide a premium service tailored to your needs and we are continually developing our services via feedback from our customers and staff.
           </p>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Our fully trained, vetted and uniformed staff ensures that you receive a professional and reliable service delivering results every time.
+            Our fully trained, vetted and uniformed staff ensure that you receive a professional and reliable service delivering results every time.
           </p>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             We prioritize consistency by assigning the same dedicated cleaning person or team to your property each visit.
