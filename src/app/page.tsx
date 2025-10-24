@@ -96,8 +96,27 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Services Overview */}
+      {/* Commitment Section */}
       <section className="py-16 md:py-24 bg-primary/10">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Commitment to You</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            We strive to provide a premium service tailored to your needs and we are continually developing our service dvia feedback from our customers and staff.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            Our fully trained, vetted and uniformed staff ensures that you receive a professional and reliable service delivering results every time.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            We prioritize consistency by assigning the same dedicated cleaning person or team to your property each visit.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            Our services are very competitively priced without compromising on quality. We believe in providing exceptional value for money to our clients.
+          </p>
+        </div>
+      </section>
+      
+      {/* Services Overview */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Cleaning Services</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
@@ -130,7 +149,7 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-primary/10">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Loved by Our Customers</h2>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -155,25 +174,6 @@ export default function Home() {
            <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-base">
             <Link href="/reviews">Read More Reviews &rarr;</Link>
           </Button>
-        </div>
-      </section>
-
-      {/* Commitment Section */}
-      <section className="py-16 md:py-24 bg-primary/10">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Commitment to You</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            We strive to provide a premium service tailored to your needs and we are continually developing our service dvia feedback from our customers and staff.
-          </p>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Our fully trained, vetted and uniformed staff ensures that you receive a professional and reliable service delivering results every time.
-          </p>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            We prioritize consistency by assigning the same dedicated cleaning person or team to your property each visit.
-          </p>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Our services are very competitively priced without compromising on quality. We believe in providing exceptional value for money to our clients.
-          </p>
         </div>
       </section>
 
