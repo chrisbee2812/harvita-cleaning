@@ -9,16 +9,25 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const service = {
   id: 'domestic',
   title: 'Domestic Cleaning',
-  description: 'Our domestic cleaning service is designed to give you back your time. We offer regular weekly, bi-weekly, or monthly cleaning schedules, as well as one-off deep cleans. Your home will be a consistently clean and healthy environment for you and your family.',
+  description: "At Harvita Services we understand the importance of trust when it comes to inviting soemone into your home. That's why we always meet with you beforehand to discuss your cleaning preferences and the products you'll love, allowing us to create a tailored cleaning specification that meets your needs every time.",
   image: PlaceHolderImages.find((img) => img.id === 'domestic-cleaning'),
   features: [
-    'Kitchen surfaces, sinks, and appliance exteriors cleaned', 
-    'Complete bathroom sanitization (toilets, showers, and sinks)', 
-    'Dusting of all surfaces, including furniture and fixtures', 
-    'Vacuuming carpets and rugs', 
-    'Mopping hard floors', 
-    'Bedroom tidying and making beds',
-    'Emptying all trash bins'
+    'The same dedicated and fully trained team are assigned to your home on a regular schedule in order to provide a consistent and personalised service.', 
+    'Public and employee liability insurance coverage up to £5 million prioritises your peace of mind.', 
+    'We welcome your feedback to continually enhance the quality of our service.',
+  ],
+  weeklyFortnightFeatures: [
+    'General cleaning: Dusting, vacuuming and mopping of floors, cleaning surfaces and tidying up.', 
+    'Kitchen cleaning: Wiping down counter tops, cleaning appliances and mopping floors.', 
+    'Bathroom cleaning: Sanitizing sinks, toilets, showers and bathtubs, and polishing mirrors.',
+    'Bedroom cleaning: Dusting, vacuuming, changing bed linen (if requested) and general tidying.',
+  ],
+  oneoffFeatures: [
+    'Kitchen deep cleaning: Thorough cleaning of all appliances (inside and out), countertops, cabinets, sinks and floors. We tackle grease and grime build-up to ensure a sparkling kitchen.', 
+    'Bathroom deep cleaning: Deep cleaning and sinitising of showers, bathtubs, toilets, sinks, tiles. We remove soap scum, limescale and mold on tiles to leave your bathroom spotless.', 
+    'Living and Dining areas: Comprehensive dusting, vacuuming and mopping of all surfaces.',
+    'Bedroom deep cleaning: Detailed cleaning of all surfaces including under beds and behind furniture to create a truly clean and restful environment.', 
+    'Specialised cleaning: Additional services like fridge cleaning, inside oven cleaning, dishwasher, microwave cleaning can be done separately.', 
   ],
 };
 
@@ -56,10 +65,13 @@ export default function DomesticCleaningPage() {
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold font-headline">A Spotless Home, Without the Hassle</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              {service.description} We use eco-friendly products that are safe for your children and pets, ensuring a clean that you can feel good about. Let our professional and vetted team handle the dirty work.
+              {service.description} We ensure a clean that you can feel good about. Let our professional and vetted team handle the dirty work.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Minimum booking is one hour. We customise our service to accommodate your individual needs. Several key factors influence the total time needed to achieve a sparkling clean home. Whether you have pets, wish to include ironing, possess numerous ornaments or prefer to have your windows cleaned each visit all play a crucial role in determining the cleaning time required. Understanding your unique needs will help us tailor our services to your home allowing you to enjoy your home to the fullest.
             </p>
             <h3 className="mt-8 text-2xl font-bold font-headline">What's Included?</h3>
-            <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-muted-foreground">
+            <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
               {service.features.map((feature) => (
                 <li key={feature} className="flex items-start">
                   <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
@@ -67,6 +79,49 @@ export default function DomesticCleaningPage() {
                 </li>
               ))}
             </ul>
+            <h3 className="mt-8 text-2xl font-bold font-headline">Weekly Cleaning/Regular Cleaning</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
+                {service.features.map((feature) => (
+                <li key={feature} className="flex items-start">
+                  <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-8 text-2xl font-bold font-headline">Fortnightly Cleaning</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
+              {service.weeklyFortnightFeatures.map((feature) => (
+                <li key={feature} className="flex items-start">
+                  <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-8 text-2xl font-bold font-headline">One off clean/Deep clean</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
+              {service.oneoffFeatures.map((feature) => (
+                <li key={feature} className="flex items-start">
+                  <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-8 text-2xl font-bold font-headline">Cleaning Materials and Equipment</h3>
+            <p className="mt-4 text-lg text-muted-foreground">
+              To ensure a hygenic enviroment in your home we respectfully request that you provide separate cleaning cloths designated for specific purposes.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              In the bathroom, please supply two cloths: one exclusively for the toilet and another for all other surfaces.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              A distinct cloth for the kitchen is also necessary, along with a duster for polishing and a microfibre or glass cloth for mirrors and stainless steel.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Furthermore, a long handled fluffy duster for skirting boards and cobweb removal, as well as a vacuum cleaner for floor maintenance and a suitable mop and bucket for hard surface cleaning will enhance the effectiveness of our cleaning services.
+            </p>
+            <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
+                <Link href={`/contact?service=${service.id}`}>Get a Free Quote</Link>
+            </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
             <Card>

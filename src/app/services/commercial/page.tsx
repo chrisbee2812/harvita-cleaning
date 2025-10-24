@@ -9,16 +9,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const service = {
   id: 'commercial',
   title: 'Commercial Cleaning',
-  description: 'We handle cleaning for a variety of commercial spaces, including retail stores, medical facilities, and more. Our team is equipped to manage larger areas and specialized cleaning needs, adhering to the highest standards of cleanliness and hygiene.',
+  description: 'We handle cleaning for a variety of commercial spaces, including educational buildings, leisure and health environments, retail stores, medical facilities, and more. Harvita Services is dedicated to upholding the highest standards of quality by leading from the front and insipring our staff to perform at their best.',
   image: PlaceHolderImages.find((img) => img.id === 'commercial-cleaning'),
   features: [
-    'Customized cleaning plans tailored to your industry',
-    'Large-scale floor maintenance, including waxing and polishing',
-    'Interior and exterior window and facade cleaning',
-    'Comprehensive sanitization of high-touch and high-traffic areas',
-    'Flexible after-hours and weekend scheduling',
-    'Compliance with industry-specific cleaning standards',
-    'Waste management and disposal coordination',
+    'We implement regular unannounced spot checks to ensure consistent service quality',
+    'We provide continuous professional development and training for our cleaning staff',
+    'Thorough cleaning inspections are carried out to enhance our methods and ensure excellence',    
   ],
 };
 
@@ -59,7 +55,7 @@ export default function CommercialCleaningPage() {
               {service.description} We develop customized cleaning protocols to meet the specific demands of your commercial space, ensuring safety, compliance, and a pristine environment for your customers and staff.
             </p>
             <h3 className="mt-8 text-2xl font-bold font-headline">What's Included?</h3>
-            <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-muted-foreground">
+            <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
               {service.features.map((feature) => (
                 <li key={feature} className="flex items-start">
                   <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
@@ -67,6 +63,21 @@ export default function CommercialCleaningPage() {
                 </li>
               ))}
             </ul>
+            <p className="mt-8 text-lg text-muted-foreground">
+              Our clients enjoy 24 hour access to their managers, reflecting our commitment to outstanding service. We recognise that effective communication is fundamental. Please feel free to contact us via phone or email with any inquiries. We can arrange a meeting to assess your cleaning requirements.
+            </p>
+            <h3 className="mt-10 text-2xl font-bold font-headline">Example dedicated services</h3>
+            <h4 className="mt-6 text-xl font-bold font-headline">School Cleaning</h4>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Our school cleaning services are dedicated to ensuring a safe and healthy environment for both students and staff. We perform essential tasks such as dusting, vacuuming, mopping and sanitizing high-touch surfaces, in addition to waste removal, deep cleaning of kitchens and restrooms. Periodic deep cleaning and sanitising are also carried out to address less frequent tasks, including window washing and carpet cleaning, guaranteeing a thoroughly clean educational setting for everyone.
+            </p>
+            <h4 className="mt-6 text-xl font-bold font-headline">Gym Cleaning</h4>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Gym cleaning services play a vital role in maintaining hygiene and appeal within fitness centers. Our professional team ensures comprehensive sanitation of workour, rest rooms, locker rooms and communal areas, safeguarding the health of all members. We specifically focus on high-touch surfaces, including weights, machines and mats, implementing regular disinfection protocols to curb the spread of germs. Upholding a clean environment is imperative for enhancing member satisfaction and promoting overall health, especially in areas prone to sweat and moisture.
+            </p>
+            <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
+                <Link href={`/contact?service=${service.id}`}>Request a Consultation</Link>
+            </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
             <Card>

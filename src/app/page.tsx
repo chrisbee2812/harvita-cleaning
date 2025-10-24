@@ -4,7 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Award, Leaf, Users, Star } from 'lucide-react';
+import { Award, Gem, Users, Star } from 'lucide-react';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
 const domesticImage = PlaceHolderImages.find((img) => img.id === 'domestic-cleaning');
@@ -32,9 +32,9 @@ const features = [
     description: "Our cleaners are vetted, trained, and committed to delivering top-quality service."
   },
   {
-    icon: <Leaf className="h-8 w-8 text-primary" />,
-    title: "Eco-Friendly Products",
-    description: "We use sustainable and non-toxic cleaning products that are safe for your family and pets."
+    icon: <Gem className="h-8 w-8 text-primary" />,
+    title: "Fully Insured Service",
+    description: "Both public and employee liability insurance to the sum of £5 million for your peace of mind."
   },
   {
     icon: <Award className="h-8 w-8 text-primary" />,
@@ -64,7 +64,16 @@ export default function Home() {
             Sparkling Clean, Every Time.
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Harvita Services offers premium domestic, office, and commercial cleaning tailored to your needs.
+            Welcome to Harvita Services Ltd. your trusted premium cleanign solutions partner in West Sussex.
+          </p>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Established in 2018, we offer a comprehensive range of commercial and domestic services tailored to meet your specific needs.
+          </p>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            As a local business we are dedicated to building long-term relationships with our clients, ensuring clean, healthy and inviting spaces at both homes and businesses.
+          </p>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Experience our unwavering commitment to quality today.
           </p>
           <Button asChild size="lg" className="mt-8">
             <Link href="/contact">Get a Free Quote</Link>
@@ -88,7 +97,7 @@ export default function Home() {
       </section>
       
       {/* Services Overview */}
-      <section className="py-16 md:py-24 bg-secondary/50">
+      <section className="py-16 md:py-24 bg-primary/10">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Cleaning Services</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
@@ -149,8 +158,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Commitment Section */}
+      <section className="py-16 md:py-24 bg-primary/10">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Commitment to You</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            We strive to provide a premium service tailored to your needs and we are continually developing our service dvia feedback from our customers and staff.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            Our fully trained, vetted and uniformed staff ensures that you receive a professional and reliable service delivering results every time.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            We prioritize consistency by assigning the same dedicated cleaning person or team to your property each visit.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            Our services are very competitively priced without compromising on quality. We believe in providing exceptional value for money to our clients.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary/20">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready for a Cleaner Space?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">

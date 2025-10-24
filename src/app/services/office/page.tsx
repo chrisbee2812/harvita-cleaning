@@ -59,7 +59,7 @@ export default function OfficeCleaningPage() {
               {service.description} We work around your business hours to minimize disruption, providing a consistently clean environment for your employees and clients.
             </p>
             <h3 className="mt-8 text-2xl font-bold font-headline">What's Included?</h3>
-            <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-muted-foreground">
+            <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
               {service.features.map((feature) => (
                 <li key={feature} className="flex items-start">
                   <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
