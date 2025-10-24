@@ -29,7 +29,7 @@ const features = [
   {
     icon: <Users className="h-8 w-8 text-primary" />,
     title: "Experienced Team",
-    description: "Our cleaners are vetted, trained, and committed to delivering top-quality service."
+    description: "Our cleaners are vetted, trained, and committed to delivering a top-quality service."
   },
   {
     icon: <Gem className="h-8 w-8 text-primary" />,
@@ -64,7 +64,7 @@ export default function Home() {
             Sparkling Clean, Every Time.
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Welcome to Harvita Services Ltd. your trusted premium cleanign solutions partner in West Sussex.
+            Welcome to Harvita Services Ltd. your trusted premium cleaning solutions partner in West Sussex.
           </p>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
             Established in 2018, we offer a comprehensive range of commercial and domestic services tailored to meet your specific needs.
@@ -76,7 +76,7 @@ export default function Home() {
             Experience our unwavering commitment to quality today.
           </p>
           <Button asChild size="lg" className="mt-8">
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/contact">Request a Consultation</Link>
           </Button>
         </div>
       </section>
@@ -185,7 +185,7 @@ export default function Home() {
             Let us handle the cleaning so you can focus on what matters most.
           </p>
           <Button asChild size="lg" className="mt-8">
-            <Link href="/contact">Request Your Free Quote Today</Link>
+            <Link href="/contact">Request a Consultation Today</Link>
           </Button>
         </div>
       </section>

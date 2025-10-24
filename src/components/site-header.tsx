@@ -90,7 +90,7 @@ export function SiteHeader() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button asChild className="hidden md:inline-flex rounded-full">
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/contact">Request a Consultation</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>

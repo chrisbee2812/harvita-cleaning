@@ -78,7 +78,7 @@ export default function ServicesPage() {
                      <Link href={service.href}>Learn More</Link>
                    </Button>
                    <Button asChild>
-                     <Link href={`/contact?service=${service.id}`}>Get Quote for {service.title}</Link>
+                     <Link href={`/contact?service=${service.id}`}>Request a Consultation for {service.title}</Link>
                    </Button>
                  </CardFooter>
               </div>
