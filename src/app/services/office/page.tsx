@@ -194,7 +194,7 @@ export default function OfficeCleaningPage() {
           <div className="lg:col-span-1 space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline">Request a Consultation</CardTitle>
+                <CardTitle className="font-headline text-primary">Request a Consultation</CardTitle>
                 <CardDescription>Let's discuss your office cleaning needs. Contact us for a detailed proposal.</CardDescription>
               </CardHeader>
               <CardFooter>

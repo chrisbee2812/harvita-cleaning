@@ -126,7 +126,7 @@ export default function DomesticCleaningPage() {
           <div className="lg:col-span-1 space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline">Ready for a Quote?</CardTitle>
+                <CardTitle className="font-headline text-primary">Ready for a Quote?</CardTitle>
                 <CardDescription>Click the button below to get a free, no-obligation estimate for your home.</CardDescription>
               </CardHeader>
               <CardFooter>

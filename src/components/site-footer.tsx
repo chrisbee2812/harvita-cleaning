@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export function SiteFooter() {
   return (
-    <footer className="w-full border-t border-border/40 bg-primary/10 py-8">
+    <footer className="w-full border-t border-border bg-primary/10 py-8">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+        <div className="flex flex-col items-center w-1/3 gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Image
             src='/HSL-Logo-nobg.png'
             alt='Harvita Services Logo'
@@ -25,7 +25,7 @@ export function SiteFooter() {
           </div>
           
         </div>
-        <div className="text-center">
+        <div className="text-center w-1/3">
           <p className="text-center text-sm leading-loose text-muted-foreground">
             Harvita Services, Your Exceptional cleaning company covering: 
           </p>
@@ -36,7 +36,7 @@ export function SiteFooter() {
             Hurstpierpoint, Crawley and surrounding areas.
           </p>
         </div>
-        <nav className="flex items-center gap-4 text-sm text-muted-foreground">
+        <nav className="flex items-center w-1/3 gap-4 text-sm text-muted-foreground">
           <Link href="/services" className="transition-colors hover:text-foreground">Services</Link>
           <Link href="/reviews" className="transition-colors hover:text-foreground">Reviews</Link>
           <Link href="/contact" className="transition-colors hover:text-foreground">Contact</Link>

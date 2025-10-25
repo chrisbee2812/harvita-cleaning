@@ -82,7 +82,7 @@ export default function CommercialCleaningPage() {
           <div className="lg:col-span-1 space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline">Get a Commercial Bid</CardTitle>
+                <CardTitle className="font-headline text-primary">Get a Commercial Bid</CardTitle>
                 <CardDescription>Partner with us to maintain your commercial property. Contact us for a consultation and bid.</CardDescription>
               </CardHeader>
               <CardFooter>
