@@ -1,6 +1,8 @@
 "use client";
 
+import Image from 'next/image';
 import Link from "next/link";
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { usePathname } from "next/navigation";
 import { Menu, Wind, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,18 +42,23 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <div className="mr-4 flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Wind className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block font-headline">
-              Harvita Services
-            </span>
-          </Link>
-          <nav className="hidden gap-4 text-sm md:flex">
+      <div className="container flex h-28 max-w-screen-2xl items-center">
+        <Link href="/" className="mr-6 flex items-center">
+          <Image
+            src='/HSL-Logo-nobg.png'
+            alt='Harvita Services Logo'
+            className="object-cover w-auto h-28"
+            width={250}
+            height={250}
+            data-ai-hint='Harvita Services Logo'
+          />
+        </Link>
+        <div className="hidden ml-8 md:block flex-col gap-8">
+                   
+          <nav className="hidden gap-4 text-lg mt-4 md:flex">
             {mainNavLinks.map((link) => (
               <Button key={link.href} variant="ghost" className={cn(
-                  "gap-1 px-2 transition-colors hover:text-foreground/80",
+                  "gap-1 px-2 text-xl transition-colors hover:text-foreground/80",
                   pathname.startsWith(`/${link.label}`) ? "text-foreground font-semibold" : "text-foreground/60"
                 )}>
                 <Link
@@ -68,7 +75,7 @@ export function SiteHeader() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
-                  "gap-1 px-2 transition-colors hover:text-foreground/80",
+                  "gap-1 px-2 text-xl transition-colors hover:text-foreground/80",
                   pathname.startsWith('/services') ? "text-foreground font-semibold" : "text-foreground/60"
                 )}>
                   Services
@@ -88,7 +95,31 @@ export function SiteHeader() {
             </DropdownMenu>
           </nav>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex flex-col flex-1 items-end justify-end gap-4 space-x-2">
+          <div className="flex text-xs gap-8">
+            <div className="flex gap-2 flex-shrink-0 mt-1">
+              <Mail className="h-4 w-4 text-primary" />
+              <p className="text-muted-foreground">
+                info@harvita.co.uk
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="flex gap-2 flex-shrink-0 mt-1">
+                <Phone className="h-4 w-4 text-primary" />
+                <p className="text-muted-foreground">
+                  07747 874664
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="flex gap-2 flex-shrink-0 mt-1">
+                <MapPin className="h-4 w-4 text-primary" />
+                <p className="text-muted-foreground">
+                  24 Cromwell Road, Burgess hill, R15 8QH
+                </p>
+              </div>
+            </div>
+          </div>
           <Button asChild className="hidden md:inline-flex rounded-full">
             <Link href="/contact">Request a Consultation</Link>
           </Button>
