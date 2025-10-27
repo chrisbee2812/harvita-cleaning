@@ -89,7 +89,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-2">
               <Mail className="h-4 w-4 text-lg" />
               <p className="text-lg">
-                info@harvita.co.uk
+                harvitaservices@gmail.com
               </p>
             </div>
             <div className="flex items-center justify-center gap-2">
