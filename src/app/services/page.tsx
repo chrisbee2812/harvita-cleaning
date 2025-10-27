@@ -27,7 +27,7 @@ const services = [
     title: 'Commercial Cleaning',
     description: "Transform your business environment with Harvita Services' professional commercial cleaning solutions, serving Burgess Hill and West Sussex. We specialize in creating cleaner, healthier spaces for small and medium businesses, knowing that your premises' appearance directly influences customer perceptions and staff satisfaction. Our customized cleaning protocols are carefully crafted to deliver maximum impact within your budget framework. Take the first step toward a spotless workplace by booking your no-obligation site visit, where we'll assess your needs and illustrate our unwavering commitment to dependable, high-quality service that keeps your business looking its best.",
     image: PlaceHolderImages.find((img) => img.id === 'commercial-cleaning'),
-    features: ['Customized cleaning plans', 'Large-scale floor maintenance', 'Window and facade cleaning', 'Sanitization of high-touch areas', 'Flexible scheduling (after hours)'],
+    features: ['Customized cleaning plans', 'Large-scale floor maintenance', 'Sanitization of high-touch areas', 'Flexible scheduling (after hours)'],
     href: '/services/commercial',
   },
 ];
@@ -60,7 +60,7 @@ export default function ServicesPage() {
               </div>
               <div className="flex flex-col justify-center p-6">
                 <CardHeader className="p-0">
-                  <CardTitle className="text-3xl font-headline">{service.title}</CardTitle>
+                  <CardTitle className="text-3xl text-primary font-headline">{service.title}</CardTitle>
                   <CardDescription className="text-base pt-2">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0 pt-6">
@@ -73,11 +73,11 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                 </CardContent>
-                 <CardFooter className="flex gap-4 p-0 pt-6">
+                 <CardFooter className="flex gap-2 md:gap-4 p-0 pt-6">
                   <Button asChild>
                      <Link href={service.href}>Learn More</Link>
                    </Button>
-                   <Button asChild>
+                   <Button asChild className="hidden md:block">
                      <Link href={`/contact?service=${service.id}`}>Request a Consultation for {service.title}</Link>
                    </Button>
                  </CardFooter>

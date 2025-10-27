@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Link from "next/link";
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { usePathname } from "next/navigation";
-import { Menu, Wind, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -96,7 +96,7 @@ export function SiteHeader() {
           </nav>
         </div>
         <div className="flex flex-col flex-1 items-end justify-end gap-4 space-x-2">
-          <div className="flex text-xs gap-8">
+          <div className="hidden md:flex text-xs gap-8">
             <div className="flex gap-2 flex-shrink-0 mt-1">
               <Mail className="h-4 w-4 text-primary" />
               <p className="text-muted-foreground">
@@ -135,13 +135,20 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetTitle className="hidden">Menu</SheetTitle>
               <Link
                 href="/"
-                className="mb-8 flex items-center"
+                className="mb-8"
                 onClick={() => setIsOpen(false)}
               >
-                <Wind className="mr-2 h-6 w-6 text-primary" />
-                <span className="font-bold font-headline">Harvita Cleaning</span>
+                <Image
+                  src='/HSL-Logo-nobg.png'
+                  alt='Harvita Services Logo'
+                  className="object-cover w-auto h-36"
+                  width={250}
+                  height={250}
+                  data-ai-hint='Harvita Services Logo'
+                />
               </Link>
               <nav className="flex flex-col gap-6 text-lg">
                 {allNavLinks.map((link) => (

@@ -110,7 +110,7 @@ export default function Home() {
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Cleaning Services</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            From homes to corporate offices, we provide a range of services to meet your needs.
+            We provide a range of cleaning services for residential properties and small to medium-sized enterprises.
           </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="overflow-hidden text-left">

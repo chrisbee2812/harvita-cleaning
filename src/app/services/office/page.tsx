@@ -82,7 +82,7 @@ export default function OfficeCleaningPage() {
             </ul>
             <h3 className="mt-8 text-2xl font-bold font-headline">Our Comprehensive Office Cleaning Services</h3>
             <p className="mt-4 text-lg text-muted-foreground">
-              We offer flexible and customisable cleaning plans to suit offices of all sizes, from small startups to large corporate campuses.
+              We offer flexible and customisable cleaning plans to suit offices of small to medium enterprises.
             </p>
             <h2 className="mt-8 text-xl font-bold font-headline">Daily & Core Cleaning Services</h2>
             <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
