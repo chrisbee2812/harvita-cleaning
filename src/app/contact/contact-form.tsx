@@ -47,6 +47,7 @@ type ServiceType = "domestic" | "office" | "commercial";
 export function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [result, setResult] = useState("");
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get('service');
 
@@ -69,16 +70,29 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log(values);
-    
+
+    const formData = new FormData();
+    formData.append("subject", `${values.name} sent a message from your website www.harvita.co.uk`)
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    if (values.phone) formData.append("phone", values.phone);
+    formData.append("service", values.service);
+    formData.append("message", values.message);
+    formData.append("access_key", "9d807b05-eac5-4a11-9e73-7c1a8171c630");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+
     toast({
       title: "Quote Request Sent!",
       description: "Thank you for your inquiry. We will get back to you shortly.",
     });
-    
+
     form.reset();
     setIsSubmitting(false);
   }

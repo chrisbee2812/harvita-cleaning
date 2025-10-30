@@ -9,7 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const service = {
   id: 'domestic',
   title: 'Domestic Cleaning',
-  description: "At Harvita Services we understand the importance of trust when it comes to inviting soemone into your home. That's why we always meet with you beforehand to discuss your cleaning preferences and the products you'll love, allowing us to create a tailored cleaning specification that meets your needs every time.",
+  description: "At Harvita Services, we recognize the paramount importance of trust when engaging with our clients in their homes. Consequently, we prioritize a preliminary consultation to ascertain your specific cleaning preferences and product requirements. This enables us to develop a bespoke cleaning specification, consistently meeting your individual needs. Our objective is to deliver a clean that instills confidence and satisfaction.",
   image: PlaceHolderImages.find((img) => img.id === 'domestic-cleaning'),
   features: [
     'The same dedicated and fully trained team are assigned to your home on a regular schedule in order to provide a consistent and personalised service.', 
@@ -65,10 +65,10 @@ export default function DomesticCleaningPage() {
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold font-headline">A Spotless Home, Without the Hassle</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              {service.description} We ensure a clean that you can feel good about. Let our professional and vetted team handle the dirty work.
+              {service.description} Allow our professional and thoroughly vetted team to manage your cleaning requirements.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Minimum booking is one hour. We customise our service to accommodate your individual needs. Several key factors influence the total time needed to achieve a sparkling clean home. Whether you have pets, wish to include ironing, possess numerous ornaments or prefer to have your windows cleaned each visit all play a crucial role in determining the cleaning time required. Understanding your unique needs will help us tailor our services to your home allowing you to enjoy your home to the fullest.
+              The minimum booking duration is one hour. We tailor our services to meet your specific requirements. Several key factors influence the total time needed to achieve an impeccably clean home. The presence of pets, the inclusion of ironing, the quantity of decorative items, or the preference for window cleaning during each visit all play a crucial role in determining the required cleaning time. Understanding your unique needs will enable us to customize our services to your home, allowing you to fully enjoy your living space.
             </p>
             <h3 className="mt-8 text-2xl font-bold font-headline">What's Included?</h3>
             <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
@@ -108,16 +108,10 @@ export default function DomesticCleaningPage() {
             </ul>
             <h3 className="mt-8 text-2xl font-bold font-headline">Cleaning Materials and Equipment</h3>
             <p className="mt-4 text-lg text-muted-foreground">
-              To ensure a hygenic enviroment in your home we respectfully request that you provide separate cleaning cloths designated for specific purposes.
+              To ensure a hygienic environment, please provide separate cleaning cloths for specific purposes: one for the toilet, one for other bathroom surfaces, and one for the kitchen.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              In the bathroom, please supply two cloths: one exclusively for the toilet and another for all other surfaces.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              A distinct cloth for the kitchen is also necessary, along with a duster for polishing and a microfibre or glass cloth for mirrors and stainless steel.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Furthermore, a long handled fluffy duster for skirting boards and cobweb removal, as well as a vacuum cleaner for floor maintenance and a suitable mop and bucket for hard surface cleaning will enhance the effectiveness of our cleaning services.
+              Also needed are a duster, a microfibre/glass cloth, a long-handled duster, a vacuum cleaner, and a mop and bucket.
             </p>
             <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
                 <Link href={`/contact?service=${service.id}`}>Get a Free Quote</Link>
