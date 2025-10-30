@@ -22,9 +22,9 @@ const reviews = [
       rating: 5,
     },
     {
-      name: "David Chen",
-      title: "Impressed with the quality",
-      review: "We hired Harvita for a post-renovation clean-up and were so impressed. They tackled a huge mess and left our new space spotless. The eco-friendly products were a huge plus for us.",
+      name: "SB",
+      title: "Hurstpierpoint",
+      review: "Harvita Cleaning Services offer exceptional services. They are great communicators, extremely reliable, and consistently maintain high standards and attention to detail. Every visit leaves our space spotless and feeling brightened up and clean. They are trustworthy, efficient, and detail-oriented — I highly recommend their services.",
       rating: 5,
     },
     {

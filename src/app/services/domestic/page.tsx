@@ -32,9 +32,9 @@ const service = {
 };
 
 const testimonial = {
-  name: "Sarah L.",
+  name: "SB, Hurstpierpoint",
   avatar: PlaceHolderImages.find((img) => img.id === 'avatar-1'),
-  review: "Harvita has been a game-changer for our family. We come home to a sparkling clean house every week. Their attention to detail is unmatched!",
+  review: "Harvita Cleaning Services offer exceptional services. They are great communicators, extremely reliable, and consistently maintain high standards and attention to detail. Every visit leaves our space spotless and feeling brightened up and clean. They are trustworthy, efficient, and detail-oriented — I highly recommend their services.",
   rating: 5,
 };
 
@@ -79,7 +79,7 @@ export default function DomesticCleaningPage() {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-8 text-2xl font-bold font-headline">Weekly Cleaning/Regular Cleaning</h3>
+            <h3 className="mt-8 text-2xl font-bold font-headline">Why Choose Us</h3>
             <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
                 {service.features.map((feature) => (
                 <li key={feature} className="flex items-start">
@@ -88,7 +88,7 @@ export default function DomesticCleaningPage() {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-8 text-2xl font-bold font-headline">Fortnightly Cleaning</h3>
+            <h3 className="mt-8 text-2xl font-bold font-headline">Weekly / Fortnightly / Regular Cleaning</h3>
             <ul className="mt-4 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
               {service.weeklyFortnightFeatures.map((feature) => (
                 <li key={feature} className="flex items-start">
@@ -145,10 +145,6 @@ export default function DomesticCleaningPage() {
               <CardContent>
                 <p className="text-muted-foreground italic">"{testimonial.review}"</p>
                 <div className="mt-4 flex items-center gap-4">
-                  {testimonial.avatar && <Avatar>
-                    <AvatarImage src={testimonial.avatar.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.avatar.imageHint} />
-                    <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                  </Avatar>}
                   <p className="font-semibold">{testimonial.name}</p>
                 </div>
               </CardContent>

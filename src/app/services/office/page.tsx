@@ -88,10 +88,6 @@ export default function OfficeCleaningPage() {
             <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
-                  <span><strong>Waste & Recycling Management: </strong>Emptying and relining all bins, with responsible disposal and recycling protocols.</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
                   <span><strong>High-Touch Surface Disinfection: </strong>Thorough cleaning and sanitizing of door handles, light switches, stair rails, and shared equipment.</span>
                 </li>
                 <li className="flex items-start">
@@ -109,6 +105,10 @@ export default function OfficeCleaningPage() {
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
                   <span><strong>Vacuuming & Mopping: </strong>Comprehensive vacuuming of carpets and mopping of hard surface floors in all traffic areas.</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                  <span><strong>Waste Bin Emptying: </strong>Emptying and relining all bins.</span>
                 </li>
             </ul>
             <h2 className="mt-8 text-xl font-bold font-headline">Specialized & Periodic Services</h2>
