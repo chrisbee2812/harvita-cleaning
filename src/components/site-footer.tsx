@@ -36,7 +36,7 @@ export function SiteFooter() {
           </p>
         </div>
         <nav className="flex items-center md:w-1/3 gap-4 text-sm text-muted-foreground">
-          <Link href="/services" className="transition-colors hover:text-foreground">Services</Link>
+          <Link href="/services/cleaning" className="transition-colors hover:text-foreground">Services</Link>
           <Link href="/reviews" className="transition-colors hover:text-foreground">Reviews</Link>
           <Link href="/contact" className="transition-colors hover:text-foreground">Contact</Link>
         </nav>
