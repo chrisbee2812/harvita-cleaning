@@ -34,7 +34,7 @@ const formSchema = z.object({
     message: "Please enter a valid email address.",
   }),
   phone: z.string().optional(),
-  service: z.enum(["domestic", "office", "commercial"], {
+  service: z.enum(["domestic", "office", "commercial", "domiciliary care"], {
     required_error: "Please select a service.",
   }),
   message: z.string().min(10, {
@@ -42,7 +42,7 @@ const formSchema = z.object({
   }),
 });
 
-type ServiceType = "domestic" | "office" | "commercial";
+type ServiceType = "domestic" | "office" | "commercial" | "domiciliary care";
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -63,7 +63,7 @@ export function ContactForm() {
   });
 
   useEffect(() => {
-    if (serviceParam && ["domestic", "office", "commercial"].includes(serviceParam)) {
+    if (serviceParam && ["domestic", "office", "commercial", "domiciliary care"].includes(serviceParam)) {
       form.setValue('service', serviceParam as ServiceType);
     }
   }, [serviceParam, form]);
@@ -155,6 +155,7 @@ export function ContactForm() {
                   <SelectItem value="domestic">Domestic Cleaning</SelectItem>
                   <SelectItem value="office">Office Cleaning</SelectItem>
                   <SelectItem value="commercial">Commercial Cleaning</SelectItem>
+                  <SelectItem value="domiciliary care">Domiciliary Care</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

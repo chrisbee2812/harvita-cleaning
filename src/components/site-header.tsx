@@ -23,10 +23,14 @@ const mainNavLinks = [
 ];
 
 
-const servicesNavLinks = [
-  { href: "/services/domestic", label: "Domestic Cleaning" },
-  { href: "/services/office", label: "Office Cleaning" },
-  { href: "/services/commercial", label: "Commercial Cleaning" },
+const cleaningServicesNavLinks = [
+  { href: "/services/cleaning/domestic", label: "Domestic Cleaning" },
+  { href: "/services/cleaning/office", label: "Office Cleaning" },
+  { href: "/services/cleaning/commercial", label: "Commercial Cleaning" },
+];
+
+const domiciliaryServicesNavLinks = [
+  { href: "/services/care/domiciliary", label: "Domiciliary Care" },
 ];
 
 export function SiteHeader() {
@@ -36,7 +40,8 @@ export function SiteHeader() {
   const allNavLinks = [
     ...mainNavLinks.slice(0, 1),
     { href: "/services", label: "Services" },
-    ...servicesNavLinks,
+    ...cleaningServicesNavLinks,
+    ...domiciliaryServicesNavLinks,
     ...mainNavLinks.slice(1)
   ];
 
@@ -76,23 +81,41 @@ export function SiteHeader() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
                   "gap-1 px-2 text-xl transition-colors hover:text-foreground/80",
-                  pathname.startsWith('/services') ? "text-foreground font-semibold" : "text-foreground/60"
+                  pathname.startsWith('/services/cleaning') ? "text-foreground font-semibold" : "text-foreground/60"
                 )}>
-                  Services
+                  Cleaning Services
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
                  <DropdownMenuItem asChild>
-                  <Link href="/services">All Services</Link>
+                  <Link href="/services/cleaning">All Services</Link>
                 </DropdownMenuItem>
-                {servicesNavLinks.map((link) => (
+                {cleaningServicesNavLinks.map((link) => (
                   <DropdownMenuItem key={link.href} asChild>
                     <Link href={link.href}>{link.label}</Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            {/* <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className={cn(
+                  "gap-1 px-2 text-xl transition-colors hover:text-foreground/80",
+                  pathname.startsWith('/services/domiciliary') ? "text-foreground font-semibold" : "text-foreground/60"
+                )}>
+                  Domiciliary Services
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {domiciliaryServicesNavLinks.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    <Link href={link.href}>{link.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu> */}
           </nav>
         </div>
         <div className="flex flex-col flex-1 items-end justify-end gap-4 space-x-2">
