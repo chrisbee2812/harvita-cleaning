@@ -5,10 +5,20 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Mail, Phone, Award, Gem, Users, Star, PoundSterling, PhoneCall, DraftingCompass } from 'lucide-react';
+// app/page.tsx
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Harvita Services | Professional Cleaning & Domiciliary Care',
+  description: 'Professional cleaning and compassionate domiciliary care services in Burgess Hill, Hassocks, Haywards Heath, and surrounding areas.',
+  // Optionally add keywords
+  keywords: 'cleaning services, domiciliary care, Burgess Hill, care at home',
+};
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
 const domesticImage = PlaceHolderImages.find((img) => img.id === 'domestic-cleaning');
 const officeImage = PlaceHolderImages.find((img) => img.id === 'office-cleaning');
+const careImage = PlaceHolderImages.find((img) => img.id === 'domiciliary-care');
 
 const testimonials = [
   {
@@ -27,7 +37,7 @@ const features = [
   {
     icon: <Users className="h-8 w-8 text-primary" />,
     title: "Experienced Team",
-    description: "Our cleaners are vetted, trained, and committed to delivering a top-quality service."
+    description: "All team members are thoroughly vetted, fully trained, and dedicated to providing professional, compassionate, and reliable support in every service we offer."
   },
   {
     icon: <PoundSterling className="h-8 w-8 text-primary" />,
@@ -36,7 +46,7 @@ const features = [
   },
   {
     icon: <Award className="h-8 w-8 text-primary" />,
-    title: "Satisfaction Guaranteed",
+    title: "Quality Assured",
     description: "Your satisfaction is our priority. If you're not happy, we'll make it right."
   },
   {
@@ -74,17 +84,22 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-4xl px-4">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-headline">
-            Sparkling Clean, Every Time
+            Professional Cleaning & Compassionate Domiciliary Care
           </h1>
           <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
             Harvita Services Ltd.
           </p>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Domestic, Office and Commercial cleaning services
+            Trusted by families and businesses across Burgess Hill and surrounding areas.
           </p>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            We cover Burgess Hill and surrounding areas
-          </p>
+          <div>
+          <Button asChild size="lg" className="mt-8 mx-8">
+            <Link href="/services/cleaning">Explore Cleaning Services</Link>
+          </Button>
+          <Button asChild size="lg" className="mt-8 mx-8">
+            <Link href="/services/care/domiciliary">Explore Domiciliary Care</Link>
+          </Button>
+          </div>
           <div className="flex items-center justify-center gap-8 flex-shrink-0 mt-4">
             <div className="flex items-center justify-center gap-2">
               <Mail className="h-4 w-4 text-lg" />
@@ -99,9 +114,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Button asChild size="lg" className="mt-8">
-            <Link href="/contact">Request a Consultation</Link>
-          </Button>
         </div>
       </section>
       
@@ -112,7 +124,19 @@ export default function Home() {
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             We provide a range of cleaning services for residential properties and small to medium-sized enterprises.
           </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden text-left">
+              {careImage && <Image src={careImage.imageUrl} alt={careImage.description} width={600} height={400} className="w-full object-cover aspect-[7/3]" data-ai-hint={careImage.imageHint}/>}
+              <CardHeader>
+                <CardTitle className="font-headline text-primary">Domiciliary Care</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Provide compassionate care for your loved ones in the comfort of their own home.</p>
+                <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
+                  <Link href="/services/care/domiciliary">Learn More &rarr;</Link>
+                </Button>
+              </CardContent>
+            </Card>
             <Card className="overflow-hidden text-left">
               {domesticImage && <Image src={domesticImage.imageUrl} alt={domesticImage.description} width={600} height={400} className="w-full object-cover aspect-[7/3]" data-ai-hint={domesticImage.imageHint}/>}
               <CardHeader>
@@ -120,6 +144,9 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">Keep your home fresh and tidy with our regular or one-off cleaning services.</p>
+                <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
+                  <Link href="/services/cleaning">Learn More &rarr;</Link>
+                </Button>
               </CardContent>
             </Card>
             <Card className="overflow-hidden text-left">
@@ -129,12 +156,15 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">Create a clean, healthy, and productive workspace for your employees and clients.</p>
+                <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
+                  <Link href="/services/cleaning">Learn More &rarr;</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
-          <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-lg font-bold">
+          {/* <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-lg font-bold">
             <Link href="/services">Explore All Services &rarr;</Link>
-          </Button>
+          </Button> */}
         </div>
       </section>
 
@@ -182,13 +212,16 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-primary/10">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready for a Cleaner Space?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">A Cleaner Home or Compassionate Care – We're Here to Help</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Let us handle the cleaning so you can focus on what matters most.
+            Whether you need a sparkling clean home or professional domiciliary care for yourself or a loved one, we're here to support you. Tell us what you need, and we'll take it from there.
           </p>
           <Button asChild size="lg" className="mt-8">
             <Link href="/contact">Request a Consultation Today</Link>
           </Button>
+          <p className="mt-4 text-muted-foreground text-sm">
+            Select 'Cleaning' or 'Domiciliary Care' on the form – we handle both.
+          </p>
         </div>
       </section>
     </div>

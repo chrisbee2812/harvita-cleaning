@@ -5,6 +5,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Domiciliary Care | Harvita Services',
+  description: 'Compassionate, professional domiciliary care services in Burgess Hill and surrounding areas. Personal care, companionship, and daily living support at home.',
+  keywords: 'domiciliary care, home care, personal care, elderly care, Burgess Hill',
+};
 
 const service = {
   id: 'care-domiciliary',
@@ -14,14 +21,8 @@ const service = {
   features: [
     "Personalized Care Plans: We develop customized care strategies tailored to each individual's unique needs and preferences.",
     "Compassionate Support: Our caregivers provide emotional support and companionship, ensuring your loved ones feel valued and cared for.",
-    "Safety and Well-being: We prioritize the safety and well-being of our clients, implementing rigorous protocols to maintain a secure environment.",
-    "A Powerful First Impression: Your office environment speaks volumes to clients, partners, and potential hires. We ensure that first impression is one of professionalism, care, and attention to detail.",
-    "Thorough cleaning and restocking of restrooms",
-    "Daily trash and recycling removal",
-    'Floor care including vacuuming and mopping',
-    'Cleaning kitchenettes and break rooms',
-    'Wiping down high-touch surfaces (doorknobs, light switches)'
-  ],
+    "Safety and Well-being: We prioritize the safety and well-being of our clients, implementing rigorous protocols to maintain a secure environment."
+    ],
 };
 
 const testimonial = {
@@ -219,9 +220,9 @@ export default function OfficeCleaningPage() {
                   <span><strong>Ongoing support: </strong>We regularly review and adjust your care plan as your needs change.</span>
                 </li>
             </ul>
-            <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
-                <Link href={`/contact?service=${service.id}`}>Get in Touch</Link>
-            </Button>
+                   <Button asChild size="lg" className="mt-8 hidden md:inline-flex">
+                     <Link href={`/contact?service=${service.id}`}>Request a Consultation for Domiciliary Care</Link>
+                   </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
             <Card>

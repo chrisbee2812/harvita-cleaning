@@ -25,6 +25,12 @@
       "imageHint": "commercial building"
     },
     {
+      "id": "domiciliary-care",
+      "description": "A compassionate and caring environment for elderly or disabled individuals.",
+      "imageUrl": "https://images.unsplash.com/photo-1702648156180-25d8be9c9527?w=1080&q=80&fit=crop&crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBoYXBweXxlbnwwfHx8fDE3NjA5Nzk4MjJ8MA&ixlib=rb-4.1.0",
+      "imageHint": "domiciliary care"
+    },
+    {
       "id": "avatar-1",
       "description": "Avatar for a customer testimonial.",
       "imageUrl": "https://images.unsplash.com/photo-1607529378676-a20456ee2f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MDk1NTA4Mnww&ixlib=rb-4.1.0&q=80&w=1080",

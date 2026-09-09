@@ -155,7 +155,7 @@ export function ContactForm() {
                   <SelectItem value="domestic">Domestic Cleaning</SelectItem>
                   <SelectItem value="office">Office Cleaning</SelectItem>
                   <SelectItem value="commercial">Commercial Cleaning</SelectItem>
-                  <SelectItem value="domiciliary care">Domiciliary Care</SelectItem>
+                  <SelectItem value="care-domiciliary">Domiciliary Care</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

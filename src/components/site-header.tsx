@@ -98,7 +98,7 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            {/* <DropdownMenu>
+            <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
                   "gap-1 px-2 text-xl transition-colors hover:text-foreground/80",
@@ -115,7 +115,7 @@ export function SiteHeader() {
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
-            </DropdownMenu> */}
+            </DropdownMenu>
           </nav>
         </div>
         <div className="flex flex-col flex-1 items-end justify-end gap-4 space-x-2">

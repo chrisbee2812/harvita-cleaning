@@ -26,7 +26,7 @@ export function SiteFooter() {
         </div>
         <div className="hidden md:block text-center w-1/3">
           <p className="text-center text-sm leading-loose text-muted-foreground">
-            Harvita Services, Your Exceptional cleaning company covering: 
+            Harvita Services – Professional cleaning and compassionate domiciliary care covering: 
           </p>
           <p className="text-center text-sm leading-loose text-muted-foreground">
             Burgess Hill, Hassocks, Haywards Heath, Cuckfield, Horsted Keynes, 
@@ -36,7 +36,8 @@ export function SiteFooter() {
           </p>
         </div>
         <nav className="flex items-center md:w-1/3 gap-4 text-sm text-muted-foreground">
-          <Link href="/services/cleaning" className="transition-colors hover:text-foreground">Services</Link>
+          <Link href="/services/cleaning" className="transition-colors hover:text-foreground">Cleaning Services</Link>
+          <Link href="/services/care/domiciliary" className="transition-colors hover:text-foreground">Domiciliary Care</Link>
           <Link href="/reviews" className="transition-colors hover:text-foreground">Reviews</Link>
           <Link href="/contact" className="transition-colors hover:text-foreground">Contact</Link>
         </nav>
