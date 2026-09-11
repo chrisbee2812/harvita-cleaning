@@ -9,10 +9,16 @@ import { Mail, Phone, Award, Gem, Users, Star, PoundSterling, PhoneCall, Draftin
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Harvita Services | Professional Cleaning',
-  description: 'Professional cleaning services in Burgess Hill, Hassocks, Haywards Heath, and surrounding areas.',
-  // Optionally add keywords
-  keywords: 'cleaning services, Burgess Hill, Hassocks, Haywards Heath',
+  title: 'Cleaning Services | Harvita Cleaning Services',
+  description: 'Professional domestic, office, and commercial cleaning services in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Sparkling clean, every time.',
+  keywords: 'cleaning services, domestic cleaning, office cleaning, commercial cleaning, Burgess Hill, Hassocks, Haywards Heath, Hurstpierpoint, Cuckfield, cleaners near me',
+  openGraph: {
+    title: 'Cleaning Services | Harvita Cleaning Services',
+    description: 'Professional domestic, office, and commercial cleaning across Burgess Hill and surrounding areas. Sparkling clean, every time.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
 };
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');

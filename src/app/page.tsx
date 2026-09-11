@@ -9,10 +9,16 @@ import { Mail, Phone, Award, Gem, Users, Star, PoundSterling, PhoneCall, Draftin
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Harvita Services | Professional Cleaning & Domiciliary Care',
-  description: 'Professional cleaning and compassionate domiciliary care services in Burgess Hill, Hassocks, Haywards Heath, and surrounding areas.',
-  // Optionally add keywords
-  keywords: 'cleaning services, domiciliary care, Burgess Hill, care at home',
+  title: 'Domiciliary Care Services | Harvita Services',
+  description: 'Compassionate domiciliary care in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Personal care, companionship, and daily living support in the comfort of your own home.',
+  keywords: 'domiciliary care, home care, personal care, elderly care, companionship, Burgess Hill, Hassocks, Haywards Heath, Hurstpierpoint, care at home, independent living',
+  openGraph: {
+    title: 'Domiciliary Care Services | Harvita Services',
+    description: 'Compassionate, person-centred domiciliary care in Burgess Hill and surrounding areas. Supporting you or your loved one to live independently at home.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Services',
+  },
 };
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
