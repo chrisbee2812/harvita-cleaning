@@ -7,9 +7,16 @@ import { Check } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cleaning Services | Harvita Services',
-  description: 'Professional domestic, office, and commercial cleaning services across Burgess Hill and surrounding areas. Sparkling clean, every time.',
-  keywords: 'domestic cleaning, commercial cleaning, office cleaning, Burgess Hill',
+  title: 'Our Cleaning Services | Domestic, Office & Commercial | Harvita Cleaning Services',
+  description: 'Explore our full range of cleaning services in Burgess Hill and surrounding areas. Domestic cleans, office cleaning, commercial contracts, deep cleans, and tailored cleaning packages.',
+  keywords: 'cleaning services, domestic cleaning, office cleaning, commercial cleaning, deep clean, regular cleaning, cleaning packages Burgess Hill, Hassocks, Haywards Heath',
+  openGraph: {
+    title: 'Our Cleaning Services | Harvita Cleaning Services',
+    description: 'Domestic, office, and commercial cleaning services across Burgess Hill and surrounding areas.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
 };
 
 const services = [

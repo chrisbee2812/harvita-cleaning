@@ -2,6 +2,20 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Star } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Client Reviews | Harvita Services Domiciliary Care',
+  description: 'Read genuine reviews from families we support across Burgess Hill, Hassocks, and Haywards Heath. See why our clients trust us for compassionate, reliable domiciliary care.',
+  keywords: 'domiciliary care reviews, care client testimonials, home care reviews Burgess Hill, Harvita Services reviews, trusted care provider',
+  openGraph: {
+    title: 'Client Reviews | Harvita Services Domiciliary Care',
+    description: 'Genuine reviews from families we support across Burgess Hill and surrounding areas. See why our clients trust us.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Services',
+  },
+};
 
 const reviews = [
     {

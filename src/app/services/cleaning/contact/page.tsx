@@ -2,6 +2,20 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from './contact-form';
 import { Card } from '@/components/ui/card';
 import { Suspense } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Harvita Cleaning Services',
+  description: 'Get in touch with Harvita Cleaning Services to arrange domestic, office, or commercial cleaning in Burgess Hill and surrounding areas. Call, email, or complete our contact form for a free quote.',
+  keywords: 'contact Harvita Cleaning Services, cleaning quote Burgess Hill, arrange cleaning, domestic cleaning enquiry, office cleaning quote',
+  openGraph: {
+    title: 'Contact Us | Harvita Cleaning Services',
+    description: 'Arrange domestic, office, or commercial cleaning in Burgess Hill and surrounding areas. Free quotes available.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
+};
 
 export default function ContactPage() {
   return (

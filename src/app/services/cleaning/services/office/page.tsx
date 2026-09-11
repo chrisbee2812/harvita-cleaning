@@ -5,6 +5,20 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Office Cleaning Services | Harvita Cleaning Services',
+  description: 'Professional office cleaning in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Daily, weekly, or flexible contracts to keep your workplace clean, tidy, and presentable.',
+  keywords: 'office cleaning, office cleaners Burgess Hill, commercial office cleaning, workplace cleaning, daily office cleaning, flexible cleaning contracts, Hassocks, Haywards Heath',
+  openGraph: {
+    title: 'Office Cleaning Services | Harvita Cleaning Services',
+    description: 'Professional office cleaning across Burgess Hill and surrounding areas. Daily, weekly, or flexible contracts.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
+};
 
 const service = {
   id: 'office',

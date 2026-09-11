@@ -5,6 +5,20 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Domestic Cleaning Services | Harvita Cleaning Services',
+  description: 'Reliable domestic cleaning for homes across Burgess Hill, Hassocks, Haywards Heath and nearby. Regular weekly or fortnightly cleans, one-off deep cleans, and tailored home cleaning packages.',
+  keywords: 'domestic cleaning, home cleaning, house cleaning Burgess Hill, regular cleaning, deep clean, weekly cleaner, fortnightly cleaning, Hassocks, Haywards Heath, Hurstpierpoint',
+  openGraph: {
+    title: 'Domestic Cleaning Services | Harvita Cleaning Services',
+    description: 'Reliable domestic cleaning for homes across Burgess Hill and surrounding areas. Regular or one-off cleans available.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
+};
 
 const service = {
   id: 'domestic',

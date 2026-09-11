@@ -2,6 +2,20 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Star } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Client Reviews | Harvita Cleaning Services',
+  description: 'Read genuine reviews from homeowners and businesses across Burgess Hill, Hassocks, and Haywards Heath. See why our clients trust us for reliable, high-quality cleaning.',
+  keywords: 'cleaning reviews, cleaner testimonials, Harvita Cleaning Services reviews, trusted cleaners Burgess Hill, domestic cleaning reviews, office cleaning reviews',
+  openGraph: {
+    title: 'Client Reviews | Harvita Cleaning Services',
+    description: 'Genuine reviews from homeowners and businesses across Burgess Hill and surrounding areas.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
+};
 
 const reviews = [
     {

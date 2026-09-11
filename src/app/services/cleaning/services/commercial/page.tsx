@@ -5,6 +5,20 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Commercial Cleaning Services | Harvita Cleaning Services',
+  description: 'Commercial cleaning for small and medium-sized businesses across Burgess Hill and surrounding areas. Tailored contracts for retail, hospitality, healthcare, and office premises.',
+  keywords: 'commercial cleaning, commercial cleaners Burgess Hill, business cleaning, retail cleaning, hospitality cleaning, healthcare cleaning, contract cleaning, SME cleaning',
+  openGraph: {
+    title: 'Commercial Cleaning Services | Harvita Cleaning Services',
+    description: 'Tailored commercial cleaning contracts for businesses across Burgess Hill and surrounding areas.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Harvita Cleaning Services',
+  },
+};
 
 const service = {
   id: 'commercial',
