@@ -114,7 +114,7 @@ export default function DomesticCleaningPage() {
               Also needed are a duster, a microfibre/glass cloth, a long-handled duster, a vacuum cleaner, and a mop and bucket.
             </p>
             <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
-                <Link href={`/contact?service=${service.id}`}>Get a Free Quote</Link>
+                <Link href={`/services/cleaning/contact?service=${service.id}`}>Get a Free Quote</Link>
             </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
@@ -125,7 +125,7 @@ export default function DomesticCleaningPage() {
               </CardHeader>
               <CardFooter>
                 <Button asChild size="lg" className="w-full">
-                  <Link href={`/contact?service=${service.id}`}>Get a Free Quote</Link>
+                  <Link href={`/services/cleaning/contact?service=${service.id}`}>Get a Free Quote</Link>
                 </Button>
               </CardFooter>
             </Card>

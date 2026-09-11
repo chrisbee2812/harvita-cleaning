@@ -5,41 +5,40 @@ import { Star } from "lucide-react";
 
 const reviews = [
     {
-    name: "Margaret",
-    title: "Compassionate and reliable",
-    review: "After my mother's mobility declined, we needed extra support at home. The carers from Harvita have been wonderful - patient, kind, and always punctual. Mum looks forward to their visits and we finally have peace of mind knowing she's well looked after.",
-    rating: 5,
-},
-{
-    name: "David",
-    title: "Professional and trustworthy",
-    review: "We arranged care for my father following his discharge from hospital. The team at Harvita were professional from the first assessment, and the carers have been consistently excellent. They treat Dad with dignity and respect, and nothing is ever too much trouble.",
-    rating: 5,
-},
-{
-    name: "Susan",
-    title: "Like having a friend visit",
-    review: "My husband has dementia and I was nervous about bringing someone new into our home. The carer assigned to us is patient, understanding, and has built a lovely rapport with him. It's taken a huge weight off my shoulders and I can't thank them enough.",
-    rating: 5,
-},
-{
-    name: "Peter",
-    title: "Flexible and accommodating",
-    review: "I needed support with personal care after surgery, and Harvita were able to arrange visits at short notice. The carers were respectful, discreet, and helped me maintain my independence during recovery. I would not hesitate to use them again.",
-    rating: 5,
-},
-{
-    name: "Jean",
-    title: "Warm and genuine people",
-    review: "From the initial phone call to the regular visits, everyone at Harvita has been warm, friendly, and genuinely caring. They don't just tick boxes - they take the time to get to know you and what matters to you. Highly recommended.",
-    rating: 5,
-},
-{
-    name: "Alan",
-    title: "Dependable and kind",
-    review: "My wife and I both need a little extra help these days, and Harvita have been a godsend. The carers are always cheerful, never rushed, and happy to help with whatever we need. It's a relief to have someone we can truly rely on.",
-    rating: 5,
-},
+        name: "Beryl",
+        title: "Efficient and willing",
+        review: "Needing a new cleaner we hired Harvita Services for a weekly clean. They are good time keepers, efficient at cleaning and willing to help and fit in as needed. I am really happy with their work and would definitely recommend them to my friends.",
+        rating: 5,
+    },
+    {
+        name: "Yvonne",
+        review: "Great clean! Always know Fadzayi has been. The house shines!",
+        rating: 5,
+    },
+    {
+      name: "",
+      title: "",
+      review: "Fadzayi & Harvita Services provide a top tier cleaning experience. Communication was prompt and clear. I was really impressed with the attention to detail, our house was left pristine. Highly recommend!",
+      rating: 5,
+    },
+    {
+      name: "SB",
+      title: "Hurstpierpoint",
+      review: "Harvita Cleaning Services offer exceptional services. They are great communicators, extremely reliable, and consistently maintain high standards and attention to detail. Every visit leaves our space spotless and feeling brightened up and clean. They are trustworthy, efficient, and detail-oriented — I highly recommend their services.",
+      rating: 5,
+    },
+    {
+      name: "Emily R.",
+      title: "Above and beyond!",
+      review: "They truly go above and beyond. I once mentioned a stubborn spot and the next time they came, they had a special solution for it. That level of care is rare. A five-star service all around.",
+      rating: 5,
+    },
+    {
+      name: "",
+      title: "Professionalism at its best",
+      review: "Our facility requires a high standard of cleanliness, and Harvita delivers every single time. Their commercial cleaning crew is efficient, discreet, and very detail-oriented. A valued partner for our business.",
+      rating: 5,
+    }
 ];
 
 const StarRating = ({ rating }: { rating: number }) => (

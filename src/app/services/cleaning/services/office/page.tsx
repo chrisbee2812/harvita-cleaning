@@ -188,7 +188,7 @@ export default function OfficeCleaningPage() {
                 </li>
             </ul>
             <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
-                <Link href={`/contact?service=${service.id}`}>Request a Consultation</Link>
+                <Link href={`/services/cleaning/contact?service=${service.id}`}>Request a Consultation</Link>
             </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
@@ -199,7 +199,7 @@ export default function OfficeCleaningPage() {
               </CardHeader>
               <CardFooter>
                 <Button asChild size="lg" className="w-full">
-                  <Link href={`/contact?service=${service.id}`}>Request a Consultation</Link>
+                  <Link href={`/services/cleaning/contact?service=${service.id}`}>Request a Consultation</Link>
                 </Button>
               </CardFooter>
             </Card>

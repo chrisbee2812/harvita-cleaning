@@ -1,98 +1,210 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Mail, Phone, Award, Gem, Users, Star, PoundSterling, PhoneCall, DraftingCompass } from 'lucide-react';
+// app/page.tsx
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cleaning Services | Harvita Services',
-  description: 'Professional domestic, office, and commercial cleaning services across Burgess Hill and surrounding areas. Sparkling clean, every time.',
-  keywords: 'domestic cleaning, commercial cleaning, office cleaning, Burgess Hill',
+  title: 'Harvita Services | Professional Cleaning',
+  description: 'Professional cleaning services in Burgess Hill, Hassocks, Haywards Heath, and surrounding areas.',
+  // Optionally add keywords
+  keywords: 'cleaning services, Burgess Hill, Hassocks, Haywards Heath',
 };
 
-const services = [
+const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
+const domesticImage = PlaceHolderImages.find((img) => img.id === 'domestic-cleaning');
+const officeImage = PlaceHolderImages.find((img) => img.id === 'office-cleaning');
+
+const testimonials = [
   {
-    id: 'domestic',
-    title: 'Domestic Cleaning',
-    description: 'Welcome to our premium domestic cleaning service, designed to give you back your time while keeping your home immaculate. Choose the schedule that works best for you: regular weekly cleaning to maintain consistent freshness, fortnightly visits for ongoing maintenance, or a customized frequency that fits your unique needs. Additionally, we offer intensive one-off deep cleaning sessions for complete home transformations, perfect for seasonal resets, special occasions, or when your space needs that extra level of care and attention.',
-    image: PlaceHolderImages.find((img) => img.id === 'domestic-cleaning'),
-    features: ['Kitchen surfaces and appliances', 'Bathroom sanitization', 'Dusting and vacuuming', 'Floor mopping', 'Bedroom tidying'],
-    href: '/services/cleaning/domestic',
+    name: "Beryl",
+    review: "Needing a new cleaner we hired Harvita Services for a weekly clean. They are good time keepers, efficient at cleaning and willing to help and fit in as needed. I am really happy with their work and would definitely recommend them to my friends.",
+    rating: 5,
   },
   {
-    id: 'office',
-    title: 'Office Cleaning',
-    description: "Harvita Services provides professional office cleaning designed to create a spotless, productive workspace. We help you maintain a clean and healthy environment that boosts employee morale and impresses clients. Our customized cleaning plans are tailored to your office's specific needs and schedule, with services available during or after business hours. Reach out to schedule a free assessment and let us create a cleaning solution that fits your budget and keeps your business shining.",
-    image: PlaceHolderImages.find((img) => img.id === 'office-cleaning'),
-    features: ['Workstation and desk cleaning', 'Common area and lobby upkeep', 'Restroom cleaning and restocking', 'Trash removal', 'Floor care and vacuuming'],
-    href: '/services/cleaning/office',
-  },
-  {
-    id: 'commercial',
-    title: 'Commercial Cleaning',
-    description: "Transform your business environment with Harvita Services' professional commercial cleaning solutions, serving Burgess Hill and West Sussex. We specialize in creating cleaner, healthier spaces for small and medium businesses, knowing that your premises' appearance directly influences customer perceptions and staff satisfaction. Our customized cleaning protocols are carefully crafted to deliver maximum impact within your budget framework. Take the first step toward a spotless workplace by booking your no-obligation site visit, where we'll assess your needs and illustrate our unwavering commitment to dependable, high-quality service that keeps your business looking its best.",
-    image: PlaceHolderImages.find((img) => img.id === 'commercial-cleaning'),
-    features: ['Customized cleaning plans', 'Large-scale floor maintenance', 'Sanitization of high-touch areas', 'Flexible scheduling (after hours)'],
-    href: '/services/cleaning/commercial',
+    name: "Yvonne",
+    review: "Great clean! Always know Fadzayi has been. The house shines!",
+    rating: 5,
   },
 ];
 
-export default function ServicesPage() {
-  return (
-    <div className="bg-background">
-      <div className="container py-16 md:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight font-headline md:text-5xl">Our Services</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We provide comprehensive cleaning solutions for every type of space. Discover how we can make your environment shine.
-          </p>
-        </div>
+const features = [
+  {
+    icon: <Users className="h-8 w-8 text-primary" />,
+    title: "Experienced Team",
+    description: "All team members are thoroughly vetted, fully trained, and dedicated to providing professional, compassionate, and reliable support in every service we offer."
+  },
+  {
+    icon: <PoundSterling className="h-8 w-8 text-primary" />,
+    title: "Value For Money",
+    description: "We provide excellent service at a fantastic price."
+  },
+  {
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: "Quality Assured",
+    description: "Your satisfaction is our priority. If you're not happy, we'll make it right."
+  },
+  {
+    icon: <PhoneCall className="h-8 w-8 text-primary" />,
+    title: "Communication",
+    description: "We welcome your calls, and communicate with you every step of the journey."
+  },
+  {
+    icon: <Gem className="h-8 w-8 text-primary" />,
+    title: "Fully Insured Service",
+    description: "Both public and employee liability insurance for your peace of mind."
+  },
+  {
+    icon: <DraftingCompass className="h-8 w-8 text-primary" />,
+    title: "Tailored Service",
+    description: "We provide a custom service, tailored to you and your premises."
+  },
+];
 
-        <div className="mt-16 space-y-16">
-          {services.map((service, index) => (
-            <Card key={service.id} className="overflow-hidden lg:grid lg:grid-cols-2 lg:items-center">
-              <div className={index % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}>
-                {service.image && (
-                  <Image
-                    src={service.image.imageUrl}
-                    alt={service.image.description}
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover aspect-video"
-                    data-ai-hint={service.image.imageHint}
-                  />
-                )}
-              </div>
-              <div className="flex flex-col justify-center p-6">
-                <CardHeader className="p-0">
-                  <CardTitle className="text-3xl text-primary font-headline">{service.title}</CardTitle>
-                  <CardDescription className="text-base pt-2">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="p-0 pt-6">
-                    <ul className="space-y-2 text-muted-foreground">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center">
-                          <Check className="mr-2 h-4 w-4 text-primary" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                </CardContent>
-                 <CardFooter className="flex gap-2 md:gap-4 p-0 pt-6">
-                  <Button asChild>
-                     <Link href={service.href}>Learn More</Link>
-                   </Button>
-                   <Button asChild className="hidden md:block">
-                     <Link href={`/contact?service=${service.id}`}>Request a Consultation for {service.title}</Link>
-                   </Button>
-                 </CardFooter>
-              </div>
-            </Card>
-          ))}
+export default function Home() {
+  return (
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl px-4">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-headline">
+            Professional Cleaning
+          </h1>
+          <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
+            Harvita Services Ltd.
+          </p>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Trusted by families and businesses across Burgess Hill and surrounding areas.
+          </p>
+          <div>
+          <Button asChild size="lg" className="mt-8 mx-8">
+            <Link href="/services/cleaning/services">Explore Cleaning Services</Link>
+          </Button>
+          </div>
+          <div className="flex items-center justify-center gap-8 flex-shrink-0 mt-4">
+            <div className="flex items-center justify-center gap-2">
+              <Mail className="h-4 w-4 text-lg" />
+              <p className="text-lg">
+                harvitaservices@gmail.com
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Phone className="h-4 w-4 text-lg" />
+              <p className="text-lg">
+                07747 874664
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      
+      {/* Services Overview */}
+      <section className="py-8 md:py-24 bg-background">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Cleaning Services</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            We provide a range of cleaning services for residential properties and small to medium-sized enterprises.
+          </p>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="overflow-hidden text-left">
+              {domesticImage && <Image src={domesticImage.imageUrl} alt={domesticImage.description} width={600} height={400} className="w-full object-cover aspect-[7/3]" data-ai-hint={domesticImage.imageHint}/>}
+              <CardHeader>
+                <CardTitle className="font-headline text-primary">Domestic Cleaning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Keep your home fresh and tidy with our regular or one-off cleaning services.</p>
+                <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
+                  <Link href="/services/cleaning/services">Learn More &rarr;</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="overflow-hidden text-left">
+              {officeImage && <Image src={officeImage.imageUrl} alt={officeImage.description} width={600} height={400} className="w-full object-cover aspect-[7/3]" data-ai-hint={officeImage.imageHint}/>}
+              <CardHeader>
+                <CardTitle className="font-headline text-primary">Office & Commercial</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Create a clean, healthy, and productive workspace for your employees and clients.</p>
+                <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
+                  <Link href="/services/cleaning/services">Learn More &rarr;</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+          {/* <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-lg font-bold">
+            <Link href="/services">Explore All Services &rarr;</Link>
+          </Button> */}
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-primary/10">
+        <div className="container text-center">
+          <h2 className="text-3xl mb-8 md:text-4xl font-bold font-headline">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {features.map((feature) => (
+              <div key={feature.title} className="flex flex-col items-center p-4">
+                {feature.icon}
+                <h3 className="mt-4 text-xl font-semibold font-headline">{feature.title}</h3>
+                <p className="mt-2 text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Loved by Our Customers</h2>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="text-left">
+                <CardContent className="pt-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />)}
+                  </div>
+                  <p className="text-muted-foreground italic">"{testimonial.review}"</p>
+                  <div className="mt-4 flex items-center gap-4">
+                    <p className="font-semibold">{testimonial.name}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+           <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-base">
+            <Link href="/services/cleaning/reviews">Read More Reviews &rarr;</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-primary/10">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">A Cleaner Home – We're Here to Help</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+            From domestic deep cleans to office and commercial contracts, we deliver a sparkling finish every time. Tell us what you need, and we'll take it from there.
+          </p>
+          <Button asChild size="lg" className="mt-8">
+            <Link href="/services/cleaning/contact">Request a Consultation Today</Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }

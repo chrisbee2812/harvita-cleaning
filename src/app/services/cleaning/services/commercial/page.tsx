@@ -76,7 +76,7 @@ export default function CommercialCleaningPage() {
               Gym cleaning services play a vital role in maintaining hygiene and appeal within fitness centers. Our professional team ensures comprehensive sanitation of workour, rest rooms, locker rooms and communal areas, safeguarding the health of all members. We specifically focus on high-touch surfaces, including weights, machines and mats, implementing regular disinfection protocols to curb the spread of germs. Upholding a clean environment is imperative for enhancing member satisfaction and promoting overall health, especially in areas prone to sweat and moisture.
             </p>
             <Button asChild size="lg" className="mt-8 hidden lg:inline-flex">
-                <Link href={`/contact?service=${service.id}`}>Request a Consultation</Link>
+                <Link href={`/services/cleaning/contact?service=${service.id}`}>Request a Consultation</Link>
             </Button>
           </div>
           <div className="lg:col-span-1 space-y-8">
@@ -87,7 +87,7 @@ export default function CommercialCleaningPage() {
               </CardHeader>
               <CardFooter>
                 <Button asChild size="lg" className="w-full">
-                  <Link href={`/contact?service=${service.id}`}>Request a Consultation</Link>
+                  <Link href={`/services/cleaning/contact?service=${service.id}`}>Request a Consultation</Link>
                 </Button>
               </CardFooter>
             </Card>
