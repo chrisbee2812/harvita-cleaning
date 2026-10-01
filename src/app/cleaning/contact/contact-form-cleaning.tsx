@@ -24,7 +24,8 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
+
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -34,17 +35,31 @@ const formSchema = z.object({
     message: "Please enter a valid email address.",
   }),
   phone: z.string().optional(),
-  service: z.enum(["domestic", "office", "commercial", "domiciliary care"], {
-    required_error: "Please select a service.",
-  }),
+  service: z
+    .string()
+    .refine(
+      (v) => ["domestic", "office", "commercial"].includes(v),
+      { message: "Please select a service." }
+    ),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
 });
 
-type ServiceType = "domestic" | "office" | "commercial" | "domiciliary care";
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-export function ContactForm() {
+type ServiceType = "domestic" | "office" | "commercial";
+
+type FormInput = {
+  name: string;
+  email: string;
+  phone?: string;
+  service: ServiceType | "";
+  message: string;
+};
+
+export function ContactFormClean() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState("");
@@ -58,13 +73,25 @@ export function ContactForm() {
       name: "",
       email: "",
       phone: "",
-      service: undefined,
+      service: "",
       message: "",
     },
   });
+  
+  useIsomorphicLayoutEffect(() => {
+    if (
+      serviceParam &&
+      ["domestic", "office", "commercial"].includes(serviceParam)
+    ) {
+      form.setValue("service", serviceParam as ServiceType, {
+        shouldValidate: true,
+        shouldDirty: false,
+      });
+    }
+  }, [serviceParam, form]);
 
   useEffect(() => {
-    if (serviceParam && ["domestic", "office", "commercial", "domiciliary care"].includes(serviceParam)) {
+    if (serviceParam && ["domestic", "office", "commercial"].includes(serviceParam)) {
       form.setValue('service', serviceParam as ServiceType);
     }
   }, [serviceParam, form]);
@@ -94,10 +121,15 @@ export function ContactForm() {
       description: "Thank you for your inquiry. We will get back to you shortly.",
     });
 
-    form.reset();
+    form.reset({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
     setIsSubmitting(false);
   }
-  if (pathname.startsWith('/services/cleaning')) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -146,7 +178,11 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Service of Interest</FormLabel>
-              <Select onValueChange={field.onChange} value={field.value}>
+              <Select
+                key={field.value ?? "empty"}
+                onValueChange={field.onChange}
+                value={field.value ?? ""}
+              >
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a service" />
@@ -184,84 +220,5 @@ export function ContactForm() {
         </Button>
       </form>
     </Form>
-  );}
-  else {
-    return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl>
-                <Input placeholder="John Doe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email Address</FormLabel>
-              <FormControl>
-                <Input placeholder="john.doe@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="01234 567890" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="service"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Service</FormLabel>
-              <FormControl>
-                <Input type="text" value="Domiciliary Care" readOnly />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Tell us a bit about your cleaning needs..."
-                  className="min-h-[120px]"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Submit Request"}
-        </Button>
-      </form>
-    </Form>
-  );}
+  );
 }

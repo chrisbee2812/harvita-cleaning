@@ -44,7 +44,7 @@ const formSchema = z.object({
 
 type ServiceType = "domestic" | "office" | "commercial" | "domiciliary care";
 
-export function ContactForm() {
+export function ContactFormCare() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState("");
@@ -97,95 +97,7 @@ export function ContactForm() {
     form.reset();
     setIsSubmitting(false);
   }
-  if (pathname.startsWith('/services/cleaning')) {
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl>
-                <Input placeholder="John Doe" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email Address</FormLabel>
-              <FormControl>
-                <Input placeholder="john.doe@example.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="01234 567890" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="service"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Service of Interest</FormLabel>
-              <Select onValueChange={field.onChange} value={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="domestic">Domestic Cleaning</SelectItem>
-                  <SelectItem value="office">Office Cleaning</SelectItem>
-                  <SelectItem value="commercial">Commercial Cleaning</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Tell us a bit about your cleaning needs..."
-                  className="min-h-[120px]"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Submit Request"}
-        </Button>
-      </form>
-    </Form>
-  );}
-  else {
+  
     return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -249,7 +161,7 @@ export function ContactForm() {
               <FormLabel>Your Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us a bit about your cleaning needs..."
+                  placeholder="Tell us a bit about your care needs..."
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -263,5 +175,5 @@ export function ContactForm() {
         </Button>
       </form>
     </Form>
-  );}
+  );
 }

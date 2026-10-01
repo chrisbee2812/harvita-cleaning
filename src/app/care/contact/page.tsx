@@ -1,19 +1,19 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { ContactForm } from './contact-form';
+import { ContactFormCare } from './contact-form-care';
 import { Card } from '@/components/ui/card';
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Harvita Cleaning Services',
-  description: 'Get in touch with Harvita Cleaning Services to arrange domestic, office, or commercial cleaning in Burgess Hill and surrounding areas. Call, email, or complete our contact form for a free quote.',
-  keywords: 'contact Harvita Cleaning Services, cleaning quote Burgess Hill, arrange cleaning, domestic cleaning enquiry, office cleaning quote',
+  title: 'Contact Us | Harvita Services Domiciliary Care',
+  description: 'Get in touch with Harvita Services to arrange domiciliary care in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Call, email, or complete our contact form to discuss your needs.',
+  keywords: 'contact Harvita Services, domiciliary care enquiry, arrange home care Burgess Hill, care assessment, home care contact',
   openGraph: {
-    title: 'Contact Us | Harvita Cleaning Services',
-    description: 'Arrange domestic, office, or commercial cleaning in Burgess Hill and surrounding areas. Free quotes available.',
+    title: 'Contact Us | Harvita Services Domiciliary Care',
+    description: 'Arrange compassionate domiciliary care in Burgess Hill and surrounding areas. Call, email, or complete our contact form.',
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Harvita Cleaning Services',
+    siteName: 'Harvita Services',
   },
 };
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight font-headline md:text-5xl">Get in Touch</h1>
             <p className="mt-4 text-lg text-muted-foreground">
-                Have questions or ready for a quote? Fill out the form below or contact us directly. We're happy to help!
+                Have questions or ready to discuss your care needs? Fill out the form below or contact us directly. We're happy to help!
             </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
           <Card className="lg:col-span-3 p-8">
             <Suspense fallback={<div>Loading form...</div>}>
-             <ContactForm />
+             <ContactFormCare />
             </Suspense>
           </Card>
         </div>
