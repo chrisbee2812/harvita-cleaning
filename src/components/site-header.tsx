@@ -194,20 +194,77 @@ export function SiteHeader() {
                   data-ai-hint='Harvita Services Logo'
                 />
               </Link>
-              <nav className="flex flex-col gap-6 text-lg">
-                {allNavLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "transition-colors hover:text-foreground/80",
-                      pathname === link.href ? "text-foreground font-semibold" : "text-foreground/60"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <nav className="flex flex-col gap-2 text-lg">
+                <Link
+                  href="/cleaning"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pt-4",
+                    pathname === "/cleaning" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/cleaning/services"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pt-4",
+                    pathname === "/cleaning/services" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  All Cleaning Services
+                </Link>
+                <Link
+                  href="/cleaning/services/domestic"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pl-2",
+                    pathname === "/cleaning/services/domestic" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Domestic Cleaning
+                </Link>
+                <Link
+                  href="/cleaning/services/commercial"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pl-2",
+                    pathname === "/cleaning/services/commercial" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Commercial Cleaning
+                </Link>
+                <Link
+                  href="/cleaning/services/office"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pl-2",
+                    pathname === "/cleaning/services/office" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Office Cleaning
+                </Link>
+                <Link
+                  href="/cleaning/reviews"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pt-4",
+                    pathname === "/cleaning/reviews" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Reviews
+                </Link>
+                <Link
+                  href="/cleaning/contact"
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80 pt-4",
+                    pathname === "/cleaning/contact" ? "text-foreground font-semibold" : "text-foreground/60"
+                  )}
+                >
+                  Contact
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
