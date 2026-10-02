@@ -94,23 +94,38 @@ export default function OfficeCleaningPage() {
             <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
                 <li className="flex items-start">
                   {/* <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" /> */}
-                  <span><i>Do I have to commit long-term?</i> No. Arrangements are flexible and can be adjusted or paused.</span>
+                  <span><i><strong>Do I have to commit long-term?</strong></i>
+                  <p className="mt-2 pl-6 text-muted-foreground">
+                    No. Arrangements are flexible and can be adjusted or paused.
+                  </p></span>
                 </li>
                 <li className="flex items-start">
                   {/* <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" /> */}
-                  <span><i>Can I change my carer if it's not working out?</i> Yes, always.</span>
+                  <span><i><strong>Can I change my carer if it's not working out?</strong></i>
+                  <p className="mt-2 pl-6 text-muted-foreground">
+                    Yes, always.
+                  </p></span>
                 </li>
                 <li className="flex items-start">
                   {/* <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" /> */}
-                  <span><i>Is there a minimum visit length?</i> [Insert company policy.]</span>
+                  <span><i><strong>Is there a minimum visit length?</strong></i>
+                  <p className="mt-2 pl-6 text-muted-foreground">
+                    Yes, we have a minimum visit length of 30 minutes.
+                  </p></span>
                 </li>
                 <li className="flex items-start">
                   {/* <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" /> */}
-                  <span><i>Do you work with local authorities or NHS funding?</i> [Insert company policy.]</span>
+                  <span><i><strong>Do you work with local authorities funding?</strong></i>
+                  <p className="mt-2 pl-6 text-muted-foreground">
+                    Yes, we work with local authorities and social care funding.
+                  </p></span>
                 </li>
                 <li className="flex items-start">
                   {/* <Check className="mr-3 h-5 w-5 flex-shrink-0 text-primary mt-1" /> */}
-                  <span><i>What if my needs change?</i> Care plans and risk assessments are reviewed when needs change and at planned intervals.</span>
+                  <span><i><strong>What if my needs change?</strong></i>
+                  <p className="mt-2 pl-6 text-muted-foreground">
+                    Care plans and risk assessments are reviewed when needs change and at planned intervals.
+                  </p></span>
                 </li>
             </ul>
             <Button asChild size="lg" className="mt-8 hidden md:inline-flex">

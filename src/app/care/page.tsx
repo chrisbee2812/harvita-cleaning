@@ -77,7 +77,8 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-        {heroImage && (
+        <div className="absolute inset-0">
+          {heroImage && (
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
@@ -87,6 +88,8 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
+        </div>
+        
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-4xl px-4">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-headline">
