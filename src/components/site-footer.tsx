@@ -28,7 +28,7 @@ export function SiteFooter() {
               © {new Date().getFullYear()} Harvita Cleaning Services. 
             </p>
             <p className="text-center text-xs text-muted-foreground md:text-left">
-              All Rights Reserved. Harvita Cleaning Services is a trading name of Harvita Services Ltd, registered in England and Wales, company number 12345678.
+              All Rights Reserved. Harvita Cleaning Services is a trading name of Harvita Services Ltd, registered in England and Wales, company number 11682887.
             </p>
           </div>
           
@@ -78,7 +78,7 @@ export function SiteFooter() {
               © {new Date().getFullYear()} Harvita Care Services. 
             </p>
             <p className="text-center text-xs text-muted-foreground md:text-left">
-              All Rights Reserved. Harvita Care Services is a trading name of Harvita Services Ltd, registered in England and Wales, company number 12345678.
+              All Rights Reserved. Harvita Care Services is a trading name of Harvita Services Ltd, registered in England and Wales, company number 11682887.
             </p>
           </div>
           
@@ -139,7 +139,7 @@ export function SiteFooter() {
               © {new Date().getFullYear()} Harvita Services Ltd. 
             </p>
             <p className="text-center text-xs text-muted-foreground md:text-left">
-              All Rights Reserved. Harvita Services Ltd, registered in England and Wales, company number 12345678.
+              All Rights Reserved. Harvita Services Ltd, registered in England and Wales, company number 11682887.
             </p>
           </div>
           
