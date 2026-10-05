@@ -5,12 +5,15 @@ import { Star } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Client Reviews | Harvita Services Domiciliary Care',
-  description: 'Read genuine reviews from families we support across Burgess Hill, Hassocks, and Haywards Heath. See why our clients trust us for compassionate, reliable domiciliary care.',
-  keywords: 'domiciliary care reviews, care client testimonials, home care reviews Burgess Hill, Harvita Services reviews, trusted care provider',
+  title: 'Client Reviews & Testimonials | Care in Burgess Hill | Harvita Services',
+  description:
+    'Read genuine reviews and testimonials from families we support across Burgess Hill, Hassocks, Haywards Heath and surrounding areas. See why clients trust Harvita Services for compassionate domiciliary care.',
+  keywords:
+    'Harvita Services reviews, home care reviews Burgess Hill, domiciliary care testimonials, care client feedback, trusted home care, Hassocks, Haywards Heath, Hurstpierpoint',
   openGraph: {
-    title: 'Client Reviews | Harvita Services Domiciliary Care',
-    description: 'Genuine reviews from families we support across Burgess Hill and surrounding areas. See why our clients trust us.',
+    title: 'Client Reviews & Testimonials | Harvita Services',
+    description:
+      'Real feedback from families we support across Burgess Hill and surrounding areas. Read what our clients say about our domiciliary care.',
     type: 'website',
     locale: 'en_GB',
     siteName: 'Harvita Services',

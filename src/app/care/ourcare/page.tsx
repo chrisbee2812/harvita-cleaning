@@ -8,12 +8,15 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Domiciliary Care Services | Personal Care & Companionship | Harvita Services',
-  description: 'Professional domiciliary care services in Burgess Hill and surrounding areas. Personal care, medication support, companionship, meal preparation, and daily living assistance tailored to you.',
-  keywords: 'domiciliary care, personal care, medication support, companionship, meal preparation, dementia care, respite care, home care Burgess Hill, elderly support, independent living, Hassocks, Haywards Heath, Hurstpierpoint, Cuckfield',
+  title: 'Our Care Services | Domiciliary Care in Burgess Hill | Harvita Services',
+  description:
+    'Discover our person-centred domiciliary care services in Burgess Hill and surrounding areas. Personal care, medication support, companionship, meal preparation, and daily living assistance tailored to you.',
+  keywords:
+    'our care services, domiciliary care, home care services, personal care, medication support, companionship, meal preparation, Burgess Hill, Hassocks, Haywards Heath, Hurstpierpoint, Cuckfield',
   openGraph: {
-    title: 'Domiciliary Care Services | Harvita Services',
-    description: 'Professional, compassionate domiciliary care in Burgess Hill and surrounding areas. Personal care, companionship, and daily living support at home.',
+    title: 'Our Care Services | Harvita Services',
+    description:
+      'Person-centred domiciliary care in Burgess Hill and surrounding areas. Explore the care services we provide and how we can support you at home.',
     type: 'website',
     locale: 'en_GB',
     siteName: 'Harvita Services',

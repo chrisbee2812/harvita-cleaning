@@ -8,12 +8,15 @@ import { Award, Gem, Users, Star, PoundSterling, PhoneCall, DraftingCompass, Han
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Domiciliary Care Services | Harvita Services',
-  description: 'Compassionate domiciliary care in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Personal care, companionship, and daily living support in the comfort of your own home.',
-  keywords: 'domiciliary care, home care, personal care, elderly care, companionship, Burgess Hill, Hassocks, Haywards Heath, Hurstpierpoint, care at home, independent living',
+  title: 'Home Care & Cleaning Services | Harvita Services',
+  description:
+    'Harvita Services provides compassionate domiciliary care and professional cleaning across Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Personal care, companionship, daily living support, and reliable home cleaning — all in the comfort of your own home.',
+  keywords:
+    'home care, domiciliary care, personal care, elderly care, companionship, cleaning services, domestic cleaning, home cleaning, Burgess Hill, Hassocks, Haywards Heath, Hurstpierpoint, care at home, independent living, trusted cleaners',
   openGraph: {
-    title: 'Domiciliary Care Services | Harvita Services',
-    description: 'Compassionate, person-centred domiciliary care in Burgess Hill and surrounding areas. Supporting you or your loved one to live independently at home.',
+    title: 'Home Care & Cleaning Services | Harvita Services',
+    description:
+      'Compassionate home care and professional cleaning services in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Supporting you to live well at home.',
     type: 'website',
     locale: 'en_GB',
     siteName: 'Harvita Services',

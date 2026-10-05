@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 // app/layout.tsx
 export const metadata: Metadata = {
   title: 'Harvita Services',
-  description: 'Professional cleaning and domiciliary care services in Burgess Hill and surrounding areas.',
+  description: 'Professional cleaning and domiciliary (home) care services in Burgess Hill and surrounding areas.',
   // This will be overridden by page-level metadata where specified
 };
 

@@ -5,12 +5,15 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Harvita Services Domiciliary Care',
-  description: 'Get in touch with Harvita Services to arrange domiciliary care in Burgess Hill, Hassocks, Haywards Heath and surrounding areas. Call, email, or complete our contact form to discuss your needs.',
-  keywords: 'contact Harvita Services, domiciliary care enquiry, arrange home care Burgess Hill, care assessment, home care contact',
+  title: 'Contact Our Care Team | Burgess Hill & Surrounding Areas | Harvita Services',
+  description:
+    'Get in touch with our care team in Burgess Hill. Enquire about domiciliary care, book a free assessment, or ask us a question. We cover Hassocks, Haywards Heath, Hurstpierpoint, Cuckfield and nearby areas.',
+  keywords:
+    'contact home care, care enquiry Burgess Hill, domiciliary care contact, book care assessment, home care Hassocks, care Haywards Heath, care Hurstpierpoint',
   openGraph: {
-    title: 'Contact Us | Harvita Services Domiciliary Care',
-    description: 'Arrange compassionate domiciliary care in Burgess Hill and surrounding areas. Call, email, or complete our contact form.',
+    title: 'Contact Our Care Team | Harvita Services',
+    description:
+      'Speak to our friendly care team about domiciliary care in Burgess Hill and surrounding areas. Enquiries, assessments, and questions welcome.',
     type: 'website',
     locale: 'en_GB',
     siteName: 'Harvita Services',
