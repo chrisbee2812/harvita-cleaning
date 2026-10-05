@@ -71,7 +71,7 @@ export default function OfficeCleaningPage() {
               Harvita Care is a domiciliary care provider serving Burgess Hill and the surrounding areas. We support adults who need help to remain independent in their own homes—whether that's a short visit a few times a week or regular daily support.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              We were founded on a simple principle: <i>to provide compassionate, professional care that enables individuals to live safely and comfortably in their own homes.</i>
+              We were founded on a simple principle: <i>good home care should notice the whole person, not simply complete the task.</i>
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
               As part of Harvita Services Ltd., we bring the same reliability and attention to detail that built our reputation in domestic services, now applied to supporting people in their own homes. Harvita Care is led by a Registered Adult Nurse with extensive experience across a range of healthcare settings, and our service is built around professional care standards combined with a personal, relationship-led approach.

@@ -29,7 +29,6 @@ export default function ContactPage() {
                 Have questions or ready to discuss your care needs? Fill out the form below or contact us directly. We're happy to help!
             </p>
         </div>
-
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
