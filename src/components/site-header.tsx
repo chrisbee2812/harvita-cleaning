@@ -316,7 +316,7 @@ export function SiteHeader() {
             <div className="flex gap-2 flex-shrink-0 mt-1">
               <Mail className="h-4 w-4 text-primary" />
               <p className="text-muted-foreground">
-                harvitaservices@gmail.com
+                info@harvitaservices.uk
               </p>
             </div>
             <div className="flex items-start gap-4">

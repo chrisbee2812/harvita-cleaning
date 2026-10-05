@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   },
 };
 
+
+
 export default function ContactPage() {
   return (
     <div className="bg-background">
@@ -41,8 +43,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Email</h3>
-                  <a href="mailto:harvitaservices@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    harvitaservices@gmail.com
+                  <a href="mailto:info@harvitaservices.uk" className="text-muted-foreground hover:text-primary transition-colors">
+                    info@harvitaservices.uk
                   </a>
                 </div>
               </div>
@@ -81,3 +83,4 @@ export default function ContactPage() {
     </div>
   );
 }
+  
