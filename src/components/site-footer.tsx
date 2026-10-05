@@ -103,7 +103,7 @@ export function SiteFooter() {
             <Link href="/services/care/reviews" className="transition-colors hover:text-foreground hover:font-semibold">Reviews</Link>
             <Link href="/care/contact" className="transition-colors hover:text-foreground hover:font-semibold">Contact</Link>
           </div>
-          <div>
+          {/* <div>
             <Link
               href="/harvita-statement-of-purpose-2026.pdf"
               target="_blank"
@@ -113,7 +113,7 @@ export function SiteFooter() {
             >
               View Our Statement of Purpose
             </Link>
-          </div>
+          </div> */}
         </nav>
       </div>
     </footer>

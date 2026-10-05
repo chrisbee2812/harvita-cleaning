@@ -99,7 +99,7 @@ export default function OfficeCleaningPage() {
               <strong>The HARVITA Promise</strong> guides everything we do: <strong>H</strong>umanity, <strong>A</strong>utonomy, <strong>R</strong>espect, <strong>V</strong>oice, <strong>I</strong>ndependence, <strong>T</strong>rust, and <strong>A</strong>dvocacy. It shapes how we assess needs, recruit and develop staff, deliver care, and monitor quality.
             </p>
             <div className="mt-6 flex flex-col gap-4 md:gap-4 max-w-sm md:max-w-md">
-              <Button asChild size="lg" className="mt-6 hidden md:inline-flex">
+              {/* <Button asChild size="lg" className="mt-6 hidden md:inline-flex">
                 <Link
                   href="/harvita-statement-of-purpose-2026.pdf"
                   target="_blank"
@@ -108,7 +108,7 @@ export default function OfficeCleaningPage() {
                 >
                   View Our Statement of Purpose
                 </Link>
-              </Button>
+              </Button> */}
               <Button asChild size="lg" className="mt-4 hidden md:inline-flex">
                 <Link href={"/care/contact"}>Request a Consultation for Domiciliary Care</Link>
               </Button>
