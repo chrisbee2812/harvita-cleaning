@@ -110,6 +110,17 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className="absolute bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-black/80 to-transparent">
+                <p>
+                  Please note, Harvita Care is currently undergoing CQC registration and is not yet regulated.                  
+                </p>
+                <p>
+                  Please enquire for care services now, and we will be able to provide care once registration is complete.
+                </p>
+                <p>
+                  We are happy to discuss your needs and provide information on how we will be able to support you or your loved one.
+                </p>
+              </div>
             </div>
 
           {/* Cleaning cell */}
@@ -160,7 +171,7 @@ export default function Home() {
                   <CardTitle className="font-headline text-primary">Domiciliary Care</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">We provide compassionate care for your loved ones in the comfort of their own home. From personal care to companionship, our fully trained and vetted team delivers tailored support designed around each individual's needs and routines.</p>
+                  <p className="text-muted-foreground">As we complete our CQC registration, we are preparing to provide compassionate care for your loved ones in the comfort of their own home. From personal care to companionship, our fully trained and vetted team will deliver tailored support designed around each individual's needs and routines.</p>
                   <Button asChild variant="link" className="mt-4 text-primary hover:text-primary/80 text-base">
                     <Link href="/care">Learn More &rarr;</Link>
                   </Button>

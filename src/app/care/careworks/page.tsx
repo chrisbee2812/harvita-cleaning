@@ -64,6 +64,17 @@ export default function OfficeCleaningPage() {
             How Care Works
           </h1>
         </div>
+        <div className="absolute bottom-10 left-0 right-0 h-16">
+                <p>
+                  Please note, Harvita Care is currently undergoing CQC registration and is not yet regulated.                  
+                </p>
+                <p>
+                  Please enquire for care services now, and we will be able to provide care once registration is complete.
+                </p>
+                <p>
+                  We are happy to discuss your needs and provide information on how we will be able to support you or your loved one.
+                </p>
+              </div>
       </section>
 
       <div className="container py-16 md:py-24">

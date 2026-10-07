@@ -78,60 +78,59 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
         <div className="absolute inset-0">
-          {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        </div>
-        
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-4xl px-4">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-headline">
-            Compassionate Care
-          </h1>
-          <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-            Harvita Services Ltd.
-          </p>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-            Trusted by families across Burgess Hill and surrounding areas to deliver compassionate, personalised home care.
-          </p>
-          <div>
-          {/* <Button asChild size="lg" className="mt-8 mx-8">
-            <Link href="/services/cleaning">Explore Cleaning Services</Link>
-          </Button> */}
-          <Button asChild size="lg" className="mt-8 mx-8">
-            <Link href="/care/about">Explore Home Care</Link>
-          </Button>
-          </div>
-          <div className="flex items-center justify-center gap-8 flex-shrink-0 mt-4">
-            <div className="flex items-center justify-center gap-2">
-              <Mail className="h-4 w-4 text-lg" />
-              <p className="text-lg">
-                harvitaservices@gmail.com
-              </p>
+          {/* Care cell */}
+          <div className="relative w-full h-full">
+            {careImage && (
+              <Image
+                src={careImage.imageUrl}
+                alt={careImage.description}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                priority
+                data-ai-hint={careImage.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-black/50" />
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <div className="relative z-10 max-w-4xl px-4">
+                  <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-headline">
+                    Compassionate Care
+                  </h1>
+                  <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
+                    Harvita Services Ltd. covering Burgess Hill and surrounding areas.
+                  </p>
+                  <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+                    Personalised home care for your loved ones, delivered with dignity and kindness.
+                  </p>
+                  <div>
+                    <Button asChild size="lg" className="mt-8 mx-8">
+                      <Link href="/care">Explore Care</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-10 left-0 right-0 h-16">
+                <p>
+                  Please note, Harvita Care is currently undergoing CQC registration and is not yet regulated.                  
+                </p>
+                <p>
+                  Please enquire for care services now, and we will be able to provide care once registration is complete.
+                </p>
+                <p>
+                  We are happy to discuss your needs and provide information on how we will be able to support you or your loved one.
+                </p>
+              </div>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <Phone className="h-4 w-4 text-lg" />
-              <p className="text-lg">
-                07747 874664
-              </p>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
       
       {/* Services Overview */}
       <section className="py-8 md:py-24 bg-background">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Domiciliary Care</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            We provide compassionate care for your loved ones in the comfort of their own home.
+            As we complete our CQC registration, we are preparing to provide compassionate care for your loved ones in the comfort of their own home.
           </p>
           <div className="mt-12 grid max-w-4xl mx-auto grid-cols-1 gap-8">
             <Card className="overflow-hidden text-left">

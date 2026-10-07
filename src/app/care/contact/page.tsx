@@ -32,6 +32,17 @@ export default function ContactPage() {
                 Have questions or ready to discuss your care needs? Fill out the form below or contact us directly. We're happy to help!
             </p>
         </div>
+        <div className="text-center left-0 right-0 h-16 mt-8">
+                <p>
+                  Please note, Harvita Care is currently undergoing CQC registration and is not yet regulated.                  
+                </p>
+                <p>
+                  Please enquire for care services now, and we will be able to provide care once registration is complete.
+                </p>
+                <p>
+                  We are happy to discuss your needs and provide information on how we will be able to support you or your loved one.
+                </p>
+              </div>
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
