@@ -155,7 +155,7 @@ export default function OfficeCleaningPage() {
             </p>
             <h4 className="mt-8 text-xl font-bold font-headline">Who we support</h4>
             <p className="mt-4 text-lg text-muted-foreground">
-              Harvita Care supports adults aged 18+ whose assessed needs require Personal Care within their own homes. This includes older people and adults living with physical disability, dementia, or mental health needs, where we have the competence and staffing required to provide safe support. We do not provide specialist clinical or mental health treatment, and we do not currently offer live-in care.
+              Harvita Care supports adults aged 18+ whose assessed needs require Personal Care within their own homes. This includes older people and adults living with physical disability, dementia, or mental health needs, where we have the competence and staffing required to provide safe support. We do not provide specialist clinical or mental health treatment.
             </p>
             <h4 className="mt-8 text-xl font-bold font-headline">How we build your care plan:</h4>
             <ol className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-muted-foreground">
@@ -189,7 +189,7 @@ export default function OfficeCleaningPage() {
               </CardFooter>
             </Card>
 
-            <Card className="text-left">
+            {/* <Card className="text-left">
               <CardHeader>
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />)}
@@ -205,7 +205,7 @@ export default function OfficeCleaningPage() {
                   <p className="font-semibold">{testimonial.name}</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>

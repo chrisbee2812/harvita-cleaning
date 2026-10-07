@@ -71,7 +71,7 @@ export default function OfficeCleaningPage() {
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold font-headline">Caring for your family, like our own</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Harvita Care is a domiciliary care provider serving Burgess Hill and the surrounding areas. We support adults who need help to remain independent in their own homes—whether that's a short visit a few times a week or regular daily support.
+              Harvita Care is a domiciliary care provider serving Burgess Hill and the surrounding areas. We support adults who need help to remain independent in their own homes—whether that's a short visit a few times a week, regular daily support or a live in carer.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
               We were founded on a simple principle: <i>good home care should notice the whole person, not simply complete the task.</i>
@@ -131,7 +131,7 @@ export default function OfficeCleaningPage() {
               </CardFooter>
             </Card>
 
-            <Card className="text-left">
+            {/* <Card className="text-left">
               <CardHeader>
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />)}
@@ -147,7 +147,7 @@ export default function OfficeCleaningPage() {
                   <p className="font-semibold">{testimonial.name}</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>

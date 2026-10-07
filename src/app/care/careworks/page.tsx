@@ -148,7 +148,7 @@ export default function OfficeCleaningPage() {
               </CardFooter>
             </Card>
 
-            <Card className="text-left">
+            {/* <Card className="text-left">
               <CardHeader>
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />)}
@@ -164,7 +164,7 @@ export default function OfficeCleaningPage() {
                   <p className="font-semibold">{testimonial.name}</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
