@@ -170,7 +170,7 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-background">
+      {/* <section className="py-16 md:py-24 bg-background">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Loved by Our Customers</h2>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -192,10 +192,10 @@ export default function Home() {
             <Link href="/care/reviews">Read More Reviews &rarr;</Link>
           </Button>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary/10">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Need a compassionate carer – We're Here to Help</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">

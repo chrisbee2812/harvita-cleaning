@@ -28,21 +28,15 @@ const careImage = PlaceHolderImages.find((img) => img.id === 'domiciliary-care')
 
 const testimonials = [
   {
-    name: "Margaret",
-    title: "Compassionate and reliable",
-    review: "After my mother's mobility declined, we needed extra support at home. The carers from Harvita have been wonderful - patient, kind, and always punctual. Mum looks forward to their visits and we finally have peace of mind knowing she's well looked after.",
-    rating: 5,
-    service: "Care",
-    serviceLower: "care",
-},
-{
     name: "Beryl",
-    title: "Professional and trustworthy",
     review: "Needing a new cleaner we hired Harvita Services for a weekly clean. They are good time keepers, efficient at cleaning and willing to help and fit in as needed. I am really happy with their work and would definitely recommend them to my friends.",
     rating: 5,
-    service: "Cleaning",
-    serviceLower: "cleaning",
-},
+  },
+  {
+    name: "Yvonne",
+    review: "Great clean! Always know Fadzayi has been. The house shines!",
+    rating: 5,
+  },
 ];
 
 const features = [
@@ -262,7 +256,7 @@ export default function Home() {
         </section>
         
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24 bg-primary/10">
+        {/* <section className="py-16 md:py-24 bg-primary/10">
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Loved by Our Customers</h2>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -275,16 +269,16 @@ export default function Home() {
                     <p className="text-muted-foreground italic">"{testimonial.review}"</p>
                     <div className="mt-4 flex items-center gap-4">
                       <p className="font-semibold">{testimonial.name}</p>
-                    </div>
-                    <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-base">
-                      <Link href={`/${testimonial.serviceLower}/reviews`}>`Read More {testimonial.service} Reviews &rarr;`</Link>
-                    </Button>
+                    </div>                    
                   </CardContent>
                 </Card>
               ))}
+              <Button asChild variant="link" className="mt-8 text-primary hover:text-primary/80 text-base">
+                <Link href="/cleaning/reviews">`Read More Cleaning Reviews &rarr;`</Link>
+              </Button>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section
         <section className="py-16 md:py-24 bg-primary/10">
